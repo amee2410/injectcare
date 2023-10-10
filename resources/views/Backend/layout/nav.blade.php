@@ -139,6 +139,32 @@
                           </li>
                       </ul>
                   </li>
+                  <li class="pcoded-hasmenu">
+                      <a href="javascript:void(0)" class="waves-effect waves-dark">
+                      <span class="pcoded-micon"><i class="feather icon-shield"></i></span>
+                      <span class="pcoded-mtext">Products</span>
+                      </a>
+                      <ul class="pcoded-submenu">
+                          <li class="">
+                              <a href="{{url('Category')}}" class="waves-effect waves-dark">
+                              <span class="pcoded-mtext">Product Category</span>
+                              </a>
+                          </li>
+                          <li class="">
+                              <a href="{{url('Mission_Vision')}}" class="waves-effect waves-dark">
+                              <span class="pcoded-mtext">Products</span>
+                              </a>
+                          </li>
+                          
+                      </ul>
+                  </li>
+                  <li class="">
+                      <a href="{{url('Department')}}" class="waves-effect waves-dark">
+                      <span class="pcoded-micon"><i class="feather icon-clipboard"></i></span>
+                      <span class="pcoded-mtext">Department</span>
+                      </a>
+                  </li>
+                  
                  <li class="">
                       <a href="{{url('Blogs')}}" class="waves-effect waves-dark">
                       <span class="pcoded-micon"><i class="feather icon-clipboard"></i></span>

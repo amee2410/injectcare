@@ -269,7 +269,7 @@
 
 
   <!-- Section: Call Us Area -->
-  <section class="layer-overlay overlay-theme-colored2-9 bg-img-center" data-tm-bg-img="images/bg/bg7.jpg">
+  <section class="layer-overlay overlay-theme-colored2-9 bg-img-center" data-tm-bg-img="{{asset('assets/images/bg/bg7.jpg')}}">
     <div class="container">
       <div class="section-content">
         <div class="row">
@@ -296,8 +296,8 @@
   </section>
 
   <!-- Section: Depertment -->
-  <section class="" data-tm-bg-img="images/bg/slide5.jpg">
-    <div class="container pt-90 pb-lg-60">
+  <section class="" data-tm-bg-img="{{asset('assets/images/bg/slide5.jpg')}}">
+    <div class="container pt-90" style="padding-bottom: 0px;">
       <div class="section-title">
         <div class="row justify-content-md-center">
           <div class="col-md-8">
@@ -317,70 +317,54 @@
           <div class="col-sm-12">
             <div class="tm-sc-departments tm-sc-departments-tab">
               <ul class="nav nav-tabs">
-                <li class="active"> <a href="#tab-9007-18557" class="active show" data-bs-toggle="tab"> <i class="flaticon-medical-medical51"></i> <span>Drying <br> Zone</span> </a></li>
-                <li class=""> <a href="#tab-9007-16994" class="" data-bs-toggle="tab"> <i class="flaticon-medical-stomach2"></i> <span>Sterilization <br> Zone</span> </a></li>
-                <li class=""> <a href="#tab-9007-16992" class="" data-bs-toggle="tab"> <i class="flaticon-medical-urology"></i> <span>Cooling <br> Zone</span> </a></li>
-                <li class=""><a href="#tab-9007-16991" class="" data-bs-toggle="tab"> <i class="flaticon-medical-teeth2"></i> <span>Stabilizing <br> Zone</span> </a></li>
+                @foreach ($department as $key => $dept)
+                <li class="{{ $key === 0 ? 'active' : '' }}">
+                  <a href="#{{ Str::slug($dept->title) }}" data-bs-toggle="tab" style="width: 188px; height: 104px;" class="{{ $key === 0 ? 'active' : '' }}">
+                    <span>{{ $dept->title }}</span>
+                  </a>
+                </li>
+                @endforeach
               </ul>
               <div class="tab-content">
-                <div class="tab-pane fade in active show" id="tab-9007-18557">
+                @foreach ($department as $key => $dept)
+                <div class="tab-pane fade {{ $key === 0 ? 'in active show' : '' }}" id="{{ Str::slug($dept->title) }}">
                   <div class="row">
-                    <div class="col-xl-7">
+                    <div class="col-xl-6">
                       <div class="tab-left-part mb-lg-40">
-                        <h2 class="title mt-0 mb-30">Drying Zone</h2>
-                        <p class="mb-40">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco Phasellus velit risus, euismod a lacus et mattis condimentum augue Vivamus fermentum ex quis imperdiet sodales.</p>
+                        <h2 class="title mt-0 mb-30">{{ $dept->title }}</h2>
+                        <p class="mb-40">{!! $dept->description !!}</p>
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="thumb">
+                        <img width="550" height="550" src="{{asset('Backend/images/department/'.$dept->image)}}" class="img-fullwidth" alt="images" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane fade" id="tab-9007-16994">
-                  <div class="row">
-                    <div class="col-xl-5">
-                      <div class="thumb"> <img width="550" height="550" src="images/depertment/dp2.jpg" class="img-fullwidth" alt="images" /></div>
-                    </div>
-                    <div class="col-xl-7">
-                      <div class="tab-left-part mb-lg-40">
-                        <h2 class="title mt-0 mb-30">Dentology Clinic</h2>
-                        <p class="mb-40">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco Phasellus velit risus, euismod a lacus et mattis condimentum augue Vivamus fermentum ex quis imperdiet sodales.</p>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-9007-16992">
-                  <div class="row">
-                    <div class="col-xl-7">
-                      <div class="tab-left-part mb-lg-40">
-                        <h2 class="title mt-0 mb-30">Gyneclogy Clinic</h2>
-                        <p class="mb-40">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco Phasellus velit risus, euismod a lacus et mattis condimentum augue Vivamus fermentum ex quis imperdiet sodales.</p>
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-9007-16991">
-                  <div class="row">
-                    <div class="col-xl-5">
-                      <div class="thumb"> <img width="550" height="550" src="images/depertment/dp4.jpg" class="img-fullwidth" alt="images" /></div>
-                    </div>
-                    <div class="col-xl-7">
-                      <div class="tab-left-part mb-lg-40">
-                        <h2 class="title mt-0 mb-30">Neurology Clinic</h2>
-                        <p class="mb-40">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco Phasellus velit risus, euismod a lacus et mattis condimentum augue Vivamus fermentum ex quis imperdiet sodales.</p>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                @endforeach
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
-
+  <script>
+    $(document).ready(function() {
+      // Handle tab click event
+      $('.nav-tabs li a').on('click', function() {
+        // Remove 'active' class from all tabs
+        $('.nav-tabs li').removeClass('active');
+        // Add 'active' class to the clicked tab's parent li
+        $(this).parent('li').addClass('active');
+        // Remove 'in active show' classes from all tab panes
+        $('.tab-content .tab-pane').removeClass('in active show');
+        // Get the target tab pane ID and add 'in active show' to it
+        var target = $(this).attr('href');
+        $(target).addClass('in active show');
+      });
+    });
+  </script>
   <!-- Section: Team -->
   <section class="bg-theme-colored2" data-tm-bg-img="images/footer-bg.png">
     <div class="container pb-70">

@@ -17,7 +17,8 @@ class Maincontroller extends Controller
         $about = DB::table('abouts')->select('*')->first();
         $counter = DB::table('counters')->select('*')->get();
         $team = DB::table('teams')->select('*')->get();
-        return view('Frontend.index', compact('banner', 'feature', 'about', 'counter', 'team'));
+        $department = DB::table('departments')->select('*')->get();
+        return view('Frontend.index', compact('banner', 'feature', 'about', 'counter', 'team', 'department'));
     }
 
     /**

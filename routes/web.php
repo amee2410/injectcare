@@ -4,9 +4,11 @@ use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\CounterController;
+use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\FeatureController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Maincontroller;
+use App\Http\Controllers\Product_categoryController;
 use App\Http\Controllers\TeamController;
 
 /*
@@ -35,3 +37,5 @@ Route::resource('/About', AboutusController::class);
 Route::resource('/Counter', CounterController::class);
 Route::resource('/ContactUs', ContactusController::class);
 Route::resource('/Team', TeamController::class);
+Route::resource('/Department', DepartmentController::class);
+Route::resource('/Category', Product_categoryController::class);

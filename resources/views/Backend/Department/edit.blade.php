@@ -1,8 +1,8 @@
 @php
     $html_tag_data = [];
-    $title = 'Team';
+    $title = 'Department';
     $description = 'Settings.';
-    $breadcrumbs = ["/home"=>"Home", "/Team"=>"Team"]
+    $breadcrumbs = ["/home"=>"Home", "/Department"=>"Department"]
 @endphp
 @extends('Backend.layout.layout',[
 'html_tag_data'=>$html_tag_data,
@@ -57,47 +57,39 @@
                                     <div class="col-sm-12">
                                        <div class="card">
                                           <div class="card-header">
-                                             <h5>Update Team</h5>
+                                             <h5>Update Department</h5>
                                           </div>
                                           
                                           <div class="card-block" style="text-transform: capitalize;">
-                                             <form id="main" action="{{route('Team.update',$data->id)}}" method="POST" enctype="multipart/form-data" >
+                                             <form id="main" action="{{route('Department.update',$data->id)}}" method="POST" enctype="multipart/form-data" >
                                                 @method('PUT') 
                                                 @csrf
 
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Name</label>
+                                                   <label class="col-sm-2 col-form-label">Title</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="name" placeholder="Title" value="{{$data->name}}">
+                                                      <input type="text" class="form-control" name="title" placeholder="Title" value="{{$data->title}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Designation</label>
+                                                   <label class="col-sm-2 col-form-label">Description</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="designation" placeholder="designation" value="{{$data->designation}}">
+                                                   <textarea rows="5" cols="5" class="form-control" name="description" placeholder="Enter Description">{{$data->description}}</textarea>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                               <!-- <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Linkedin Link</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="linkedin" placeholder="linkedin link" value="{{$data->linkedin}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                 -->
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (276 X 331px)</h6></label>
+                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (550 X 550px)</h6></label>
                                                    <div class="col-sm-10">
-                                                      <input type="file" class="form-control" name="banner_image" id="p_img">
+                                                      <input type="file" class="form-control" name="image" id="p_img">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label"></label>
                                                    <div class="col-sm-10">
-                                                      <img class="img-fluid card-img-top" style="height: 300px; width: 300px;" src="{{ asset('Backend/images/team/'.$data->image) }}" alt="Card image cap"><br><br>
+                                                      <img class="img-fluid card-img-top" style="height: 300px; width: 300px;" src="{{ asset('Backend/images/department/'.$data->image) }}" alt="Card image cap"><br><br>
                                                  </div>
                                                </div>
                                                 
@@ -117,7 +109,14 @@
                            </div>
                         </div>
                      </div>
-                     
+                     <script src="https://cdn.tiny.cloud/1/w5bi9dkry19hh0hu719ixcti8diunuytmt1udglc5itmtnaf/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+                        <script>
+                        tinymce.init({
+                          selector: 'textarea',
+                          plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+                          toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+                        });
+                      </script>
 @endsection
 
 
