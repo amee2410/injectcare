@@ -1,8 +1,8 @@
 @php
     $html_tag_data = [];
-    $title = 'About Us';
+    $title = 'Features';
     $description = 'Settings.';
-    $breadcrumbs = ["/home"=>"Home", "/product"=>"About Us"]
+    $breadcrumbs = ["/home"=>"Home", "/Features"=>"Features"]
 @endphp
 @extends('Backend.layout.layout',[
 'html_tag_data'=>$html_tag_data,
@@ -57,80 +57,136 @@
                                     <div class="col-sm-12">
                                        <div class="card">
                                           <div class="card-header">
-                                             <h5>About Us</h5>
+                                             <h5>Features</h5>
                                           </div>
                                           
                                           <div class="card-block" style="text-transform: capitalize;">
-                                             <form id="main" action="{{route('About.update',$data->id)}}" method="POST" enctype="multipart/form-data" >
+                                             <form id="main" action="{{route('Feature.update',$data->id)}}" method="POST" enctype="multipart/form-data" >
                                                 @method('PUT') 
                                                 @csrf
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Title:</label>
+                                                   <label class="col-sm-2 col-form-label">Feature1:</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="about_title" id="p_name" placeholder="Title" value="{{$data->about_title}}">
+                                                      <input type="text" class="form-control" name="feature1" id="p_name" placeholder="Feature1" value="{{$data->feature1}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Sub-Title:</label>
+                                                   <label class="col-sm-2 col-form-label">Icon:</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="sub_title" id="p_name" placeholder="Sub-Title 1" value="{{$data->sub_title}}">
+                                                      <input type="text" class="form-control" name="icon1" id="p_name" placeholder="Icon" value="{{$data->icon1}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                                
                                                 <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Description:</label>
+                                                    <label class="col-sm-2 col-form-label">Description1:</label>
                                                     <div class="col-sm-10">
-                                                      <textarea rows="5" cols="5" class="form-control" name="description" placeholder="Enter Description">{{$data->description}}</textarea>
+                                                      <textarea rows="5" cols="5" class="form-control" name="description1" placeholder="Enter Description">{{$data->description1}}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Point 1:</label>
+                                                   <label class="col-sm-2 col-form-label">Button1:</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="point1" id="p_name" placeholder="Title" value="{{$data->point1}}">
+                                                      <input type="text" class="form-control" name="btn1_name" id="p_name" placeholder="Name" value="{{$data->btn1_name}}">
+                                                      <input type="text" class="form-control" name="btn1_link" id="p_name" placeholder="Link" value="{{$data->btn1_link}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Point 2:</label>
+                                                   <label class="col-sm-2 col-form-label">Feature2:</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="point2" id="p_name" placeholder="Title" value="{{$data->point2}}">
+                                                      <input type="text" class="form-control" name="feature2" id="p_name" placeholder="feature2" value="{{$data->feature2}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Point 3:</label>
+                                                   <label class="col-sm-2 col-form-label">Icon:</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="point3" id="p_name" placeholder="Title" value="{{$data->point3}}">
+                                                      <input type="text" class="form-control" name="icon2" id="p_name" placeholder="Icon" value="{{$data->icon2}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Point 4:</label>
+                                                    <label class="col-sm-2 col-form-label">Description:</label>
+                                                    <div class="col-sm-10">
+                                                      <textarea rows="5" cols="5" class="form-control" name="description2" placeholder="Enter Description">{{$data->description2}}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Button2:</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="point4" id="p_name" placeholder="Title" value="{{$data->point4}}">
+                                                      <input type="text" class="form-control" name="btn2_name" id="p_name" placeholder="Name" value="{{$data->btn2_name}}">
+                                                      <input type="text" class="form-control" name="btn2_link" id="p_name" placeholder="Link" value="{{$data->btn2_link}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (600 X 596px)</h6></label>
+                                                   <label class="col-sm-2 col-form-label">Feature3:</label>
                                                    <div class="col-sm-10">
-                                                      <input type="file" class="form-control" name="about_image" id="p_img">
+                                                      <input type="text" class="form-control" name="feature3" id="p_name" placeholder="feature3" value="{{$data->feature3}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                               <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label"></label>
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Icon:</label>
                                                    <div class="col-sm-10">
-                                                   
-                                                      <img class="img-fluid card-img-top" style="height: 400px; width: 300px;" src="{{ asset('Backend/images/about/'.$data->about_image)}}" alt="Card image cap"><br><br>
-                                                 </div>
-                                               </div>
-                                               <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Button:</label>
+                                                      <input type="text" class="form-control" name="icon3" id="p_name" placeholder="Icon" value="{{$data->icon3}}">
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div> 
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Time1:</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="btn_link" id="p_name" placeholder="Title" value="{{$data->btn_link}}">
+                                                      <input type="text" class="form-control" name="time1" id="p_name" placeholder="Time" value="{{$data->time1}}">
+                                                      <input type="text" class="form-control" name="day1" id="p_name" placeholder="Day" value="{{$data->day1}}">
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Time2:</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="time2" id="p_name" placeholder="Time" value="{{$data->time2}}">
+                                                      <input type="text" class="form-control" name="day2" id="p_name" placeholder="Day" value="{{$data->day2}}">
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Time3:</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="time3" id="p_name" placeholder="Time" value="{{$data->time3}}">
+                                                      <input type="text" class="form-control" name="day3" id="p_name" placeholder="Day" value="{{$data->day3}}">
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>                                               
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Feature4:</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="feature4" id="p_name" placeholder="feature4" value="{{$data->feature4}}">
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Icon:</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="icon4" id="p_name" placeholder="Icon" value="{{$data->icon4}}">
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Description:</label>
+                                                    <div class="col-sm-10">
+                                                      <textarea rows="5" cols="5" class="form-control" name="description3" placeholder="Enter Description">{{$data->description3}}</textarea>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                               
+                                               
+                                                
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Phone:</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="phone" id="p_name" placeholder="Phone" value="{{$data->phone}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>

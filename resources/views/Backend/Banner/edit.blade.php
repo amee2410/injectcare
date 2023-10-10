@@ -68,40 +68,40 @@
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Title</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="title" id="p_name" placeholder="Title" value="{{$data->title}}">
+                                                      <input type="text" class="form-control" name="banner_title" id="p_name" placeholder="Title" value="{{$data->banner_title}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Sub-Title</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="subtitle" id="p_name" placeholder="Sub-Title" value="{{$data->subtitle}}">
+                                                      <input type="text" class="form-control" name="sub_title" id="p_name" placeholder="Sub-Title" value="{{$data->sub_title}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Button1 Name</label>
+                                                   <label class="col-sm-2 col-form-label">Title1</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="button1" id="p_name" placeholder="Sub-Title" value="{{$data->button1}}">
+                                                      <input type="text" class="form-control" name="title1" id="p_name" placeholder="Title1" value="{{$data->title1}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Button2 Name</label>
+                                                   <label class="col-sm-2 col-form-label">Title2</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="button2" id="p_name" placeholder="Sub-Title" value="{{$data->button2}}">
+                                                      <input type="text" class="form-control" name="title2" id="p_name" placeholder="Title2" value="{{$data->title2}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Button3 Name</label>
+                                                   <label class="col-sm-2 col-form-label">Title3</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="button3" id="p_name" placeholder="Sub-Title" value="{{$data->button3}}">
+                                                      <input type="text" class="form-control" name="title3" id="p_name" placeholder="Title3" value="{{$data->title3}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image<h6 style="font-size: 14px; color: red;">Size: (1280 X 752px)</h6></label>
+                                               <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Image<h6 style="font-size: 14px; color: red;">Size: (1920 X 1280 px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="banner_image" id="p_img">
                                                       <span class="messages"></span>
@@ -113,14 +113,20 @@
                                                       <img class="img-fluid card-img-top" style="height: 300px; width: 1200px;" src="{{ asset('Backend/images/banners/'.$data->banner_image) }}" alt="Card image cap"><br><br>
                                                    </div>
                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image Alt Tag</label>
+                                               <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">ReadmoreLink</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="alt_tag" value="img" id="p_dec" placeholder="Image Alt Tag" value="{{$data->alt_tag}}">
+                                                      <input type="text" class="form-control" name="read_more_link" id="p_name" placeholder="AboutLink" value="{{$data->read_more_link}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                                
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Contact us Link</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="contact_us_link" id="p_name" placeholder="Contact us Link" value="{{$data->contact_us_link}}">
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
                                                 <div class="form-group row">
                                                    <label class="col-sm-2"></label>
                                                    <div class="col-sm-10">

@@ -67,49 +67,57 @@
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Title</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="title" id="p_name" placeholder="Title" required>
+                                                      <input type="text" class="form-control" name="banner_title" id="p_name" placeholder="Title" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Sub-Title</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="subtitle" id="p_name" placeholder="Sub-Title" required>
+                                                      <input type="text" class="form-control" name="sub_title" id="p_name" placeholder="Sub-Title" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Button1 Name</label>
+                                                   <label class="col-sm-2 col-form-label">Title1</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="button1" id="p_name" placeholder="Button1 Name" required>
+                                                      <input type="text" class="form-control" name="title1" id="p_name" placeholder="title1" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Button2 Name</label>
+                                                   <label class="col-sm-2 col-form-label">Title2</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="button2" id="p_name" placeholder="Button2 Name" required>
+                                                      <input type="text" class="form-control" name="title2" id="p_name" placeholder="title2" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Button3 Name</label>
+                                                   <label class="col-sm-2 col-form-label">Title3</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="button3" id="p_name" placeholder="Button3 Name" required>
+                                                      <input type="text" class="form-control" name="title3" id="p_name" placeholder="title3" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
+                                               
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (1280 X 752px)</h6></label>
+                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (1920 X 1280 px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="banner_image" id="p_img" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image Alt Tag</label>
+                                                   <label class="col-sm-2 col-form-label">ReadmoreLink</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="alt_tag" value="img" id="p_dec" placeholder="Image Alt Tag">
+                                                      <input type="text" class="form-control" name="read_more_link" id="p_name" placeholder="AboutLink" required>
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Contact us Link</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="contact_us_link" id="p_name" placeholder="contactuslink" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>

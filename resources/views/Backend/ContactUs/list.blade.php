@@ -66,72 +66,40 @@
                                                 @csrf
 
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Email 1</label>
+                                                   <label class="col-sm-2 col-form-label">Email</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="email1" id="p_name" placeholder="Title" value="{{$data->email1}}">
+                                                      <input type="text" class="form-control" name="email" id="p_name" placeholder="Email" value="{{$data->email}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Phone No 1</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="phone_no_1" id="p_name" placeholder="Sub-Title 3" value="{{$data->phone_no_1}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                               <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Address 1</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="address1" id="p_name" placeholder="Sub-Title 2" value="{{$data->address1}}">
+                                                      <input type="text" class="form-control" name="phone1" id="p_name" placeholder="phone" value="{{$data->phone1}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Email 2</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="email2" id="p_name" placeholder="Sub-Title 1" value="{{$data->email2}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                               <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Phone No 2</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="phone_no_2" id="p_name" placeholder="Sub-Title 3" value="{{$data->phone_no_2}}">
+                                                      <input type="text" class="form-control" name="phone2" id="p_name" placeholder="phone" value="{{$data->phone2}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                               <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Address 2</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="address2" id="p_name" placeholder="Sub-Title 2" value="{{$data->address2}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Email 3</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="email3" id="p_name" placeholder="Sub-Title 2" value="{{$data->email3}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Phone No 3</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="phone_no_3" id="p_name" placeholder="Sub-Title 3" value="{{$data->phone_no_3}}">
+                                                      <input type="text" class="form-control" name="phone3" id="p_name" placeholder="phone" value="{{$data->phone3}}">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                                
-                                                
-                                                
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Address 3</label>
+                                               <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Address</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="address3" id="p_name" placeholder="Sub-Title 2" value="{{$data->address3}}">
+                                                      <input type="text" class="form-control" name="address" id="p_name" placeholder="address" value="{{$data->address}}">
                                                       <span class="messages"></span>
                                                    </div>
-                                                </div>
+                                                </div>                                                
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Map Link</label>
                                                    <div class="col-sm-10">

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-   <!-- Mirrored from demo.dashboardpack.com/admindek-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Feb 2023 04:05:50 GMT -->
+  
    <head>
-      <title>Brain Spark | {{$title}}</title>
+      <title>Inject Care | {{$title}}</title>
       <!--[if lt IE 10]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') }}"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js') }}/1.4.2/respond.min.js') }}"></script>
@@ -26,5 +26,5 @@
     </div>
     @include('Backend.layout.script')
 </body>
-<!-- Mirrored from demo.dashboardpack.com/admindek-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Feb 2023 04:06:41 GMT -->
+
 </html>

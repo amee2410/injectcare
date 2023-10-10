@@ -4,20 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\contact;
 
-class Maincontroller extends Controller
+class ContactusController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $banner = DB::table('banners')->select('*')->get();
-        $feature = DB::table('features')->select('*')->first();
-        $about = DB::table('abouts')->select('*')->first();
-        $counter = DB::table('counters')->select('*')->get();
-        $team = DB::table('teams')->select('*')->get();
-        return view('Frontend.index', compact('banner', 'feature', 'about', 'counter', 'team'));
+        $data = DB::table('contacts')->select('*')->first();
+        return view('Backend.ContactUs.list',compact('data'));
     }
 
     /**
@@ -57,7 +54,25 @@ class Maincontroller extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validator = \Validator::make($request->all(), [
+            'email' => 'required',
+            'phone1' => 'required',
+            'phone2' => 'required',
+            'address' => 'required',
+            'phone3' => 'required',
+            'map_link' => 'required',
+        ]);
+
+                $data = contact::find($id);
+                $data->email = $request->email;
+                $data->phone1 = $request->phone1;
+                $data->phone2 = $request->phone2;
+                $data->address = $request->address;
+                $data->phone3 = $request->phone3;
+                $data->map_link = $request->map_link;
+                $data->save();
+
+                return redirect('ContactUs')->with('success', 'Record Inserted Successfully');
     }
 
     /**
@@ -66,9 +81,5 @@ class Maincontroller extends Controller
     public function destroy(string $id)
     {
         //
-    }
-    public function contact()
-    {
-       return view('Frontend.contact-us');
     }
 }

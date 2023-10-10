@@ -74,21 +74,15 @@
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Number</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="count_number" id="slug" placeholder="Enter Number" required>
+                                                      <input type="text" class="form-control" name="number" id="slug" placeholder="Enter Number" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                                <div class="form-group row" hidden="hidden">
-                                                   <label class="col-sm-2 col-form-label">Icon Name</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="icon_name" id="slug" placeholder="Enter Name" required>
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
+                                               
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image</label>
+                                                   <label class="col-sm-2 col-form-label">Image: <h6 style="font-size: 14px; color: red;">Size: (1920 X 1280 px)</h6></label>
                                                    <div class="col-sm-10">
-                                                      <input type="file" class="form-control" name="icon" id="p_img">
+                                                      <input type="file" class="form-control" name="image" id="p_img">
                                                       <span class="messages"></span>
                                                    </div>
                                                </div>

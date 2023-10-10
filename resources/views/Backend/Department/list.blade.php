@@ -1,8 +1,8 @@
 @php
     $html_tag_data = [];
-    $title = 'Banners';
+    $title = 'Team';
     $description = 'Settings.';
-    $breadcrumbs = ["/home"=>"Home", "/banners"=>"Banners"]
+    $breadcrumbs = ["/home"=>"Home", "/Team"=>"Team"]
 @endphp
 @extends('Backend.layout.layout',[
 'html_tag_data'=>$html_tag_data,
@@ -50,7 +50,7 @@
                                     <div class="col-sm-12">
                                         <div class="card">
                                             <div class="card-header">
-                                                <a href="{{route('Banner.create')}}" class="btn btn-out waves-effect waves-light btn-inverse btn-square">Create</a>
+                                                <a href="{{route('Team.create')}}" class="btn btn-out waves-effect waves-light btn-inverse btn-square">Create</a>
                                                 <!-- <h5>Column Selectors</h5>
                                                 <span class="m-b-20">All of the data export buttons have a exportOptions option which can be used to specify information about what data should be exported and how. The options given for this parameter are passed directly to the buttons.exportData() method to obtain the required data.</span>
                                                 <span>One of the most commonly used is the columns option which defines the columns that should be used as part of the export. This is given as a column-selector, making it simple to tell it if you want only visible columns, or a mix of the columns available.</span> -->
@@ -61,7 +61,8 @@
                                                     <thead>
                                                         <tr style="text-transform: capitalize;">
                                                             <th>Id</th>
-                                                            <th>Title</th>
+                                                            <th>Name</th>
+                                                            <th>Deignation</th>
                                                             <th>Image</th>
                                                             <th>Action</th>
                                                         </tr>
@@ -70,11 +71,12 @@
                                                         <tr>
                                                             @foreach($data as $d)
                                                             <td>{{$d->id}}</td>
-                                                            <td>{{$d->banner_title}}</td>
-                                                            <td><img src="{{ asset('/Backend/images/banners/'.$d->banner_image) }}" alt="Image" title="Image" width="400px" height="200px"></td>
+                                                            <td>{{$d->name}}</td>
+                                                            <td>{{$d->designation}}</td>
+                                                            <td><img src="{{ asset('/Backend/images/team/'.$d->image) }}" alt="Image" title="Image" width="100px" height="100px"></td>
                                                             <td> 
-                                                            <form action="{{route('Banner.destroy',$d->id)}}" method="Post">
-                                                                <a class="btn btn-primary" href="{{route('Banner.edit',$d->id)}}">Edit</a>
+                                                            <form action="{{route('Team.destroy',$d->id)}}" method="Post">
+                                                                <a class="btn btn-primary" href="{{route('Team.edit',$d->id)}}">Edit</a>
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <button type="submit" class="btn btn-danger">Delete</button>

@@ -89,8 +89,8 @@
                               </a>
                           </li>
                           <li class="">
-                              <a href="{{url('DMIT')}}" class="waves-effect waves-dark">
-                              <span class="pcoded-mtext">About DMIT</span>
+                              <a href="{{url('Feature')}}" class="waves-effect waves-dark">
+                              <span class="pcoded-mtext">Features</span>
                               </a>
                           </li>
                           <li class="">

@@ -71,7 +71,7 @@
                                                             @foreach($data as $d)
                                                             <td>{{$d->id}}</td>
                                                             <td>{{$d->title}}</td>
-                                                            <td>{{$d->count_number}}</td>
+                                                            <td>{{$d->number}}</td>
                                                             <td> 
                                                             <form action="{{route('Counter.destroy',$d->id)}}" method="Post">
                                                                 <a class="btn btn-primary" href="{{route('Counter.edit',$d->id)}}">Edit</a>
