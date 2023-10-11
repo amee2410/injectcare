@@ -67,13 +67,17 @@
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Category</label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="cat_name" id="name" placeholder="category name" required>
+                                                      <input type="text" class="form-control" name="category_name" id="name" placeholder="category name" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                                
-                                                
-                                                
+                                                <div class="form-group row" hidden="hidden">
+                                                   <label class="col-sm-2 col-form-label">Slug</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="slug" id="slug" placeholder="Slug" required>
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
                                                 <div class="form-group row">
                                                    <label class="col-sm-2"></label>
                                                    <div class="col-sm-10">
@@ -89,7 +93,17 @@
                            </div>
                         </div>
                      </div>
-                     
+                     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                        <script>
+                        $(document).ready(function(){
+                            $("#name").on("input", function(){
+                                // Print entered value in a div box
+                                    $("#slug").val($(this).val().split(' ').join('-').toLowerCase());
+                
+                            });
+                        });
+                
+                        </script>
 @endsection
 
 

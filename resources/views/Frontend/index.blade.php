@@ -365,6 +365,84 @@
       });
     });
   </script>
+  <!--client -->
+  <section class="bg-silver-light">
+    <div class="container">
+      <div class="section-title">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tm-sc-section-title section-title text-center">
+              <div class="title-wrapper">
+                <!-- <h6 class="subtitle text-theme-colored1">Our Clients</h6> -->
+                <h2 class="title">Our Clients</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="tm-sc-testimonials tm-sc-testimonials-carousel testimonial-style7-current-theme owl-dots-dark-skin owl-dots-center owl-nav-outer">
+              <div class="owl-carousel owl-theme tm-owl-carousel-3col" data-dots="true" data-autoplay="true" data-loop="true" data-duration="6000" data-smartspeed="300" data-margin="30" data-stagepadding="0">
+                <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+                  <div class="tm-staff">
+                    <div class="staff-inner">
+                      <div class="thumb">
+                        <img src="{{asset('assets/images/team/1.jpg')}}" alt="Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+                  <div class="tm-staff">
+                    <div class="staff-inner">
+                      <div class="thumb">
+                        <img src="images/team/1.jpg" alt="Image">
+                        <div class="staff-social-links">
+                          <ul>
+                            <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="staff-content">
+                        <h4 class="name text-black-333"><a href="page-team-details.html">David James</a></h4>
+                        <div class="speciality">Consultant</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+                  <div class="tm-staff">
+                    <div class="staff-inner">
+                      <div class="thumb">
+                        <img src="images/team/1.jpg" alt="Image">
+                        <div class="staff-social-links">
+                          <ul>
+                            <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="staff-content">
+                        <h4 class="name text-black-333"><a href="page-team-details.html">David James</a></h4>
+                        <div class="speciality">Consultant</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Section: Team -->
   <section class="bg-theme-colored2" data-tm-bg-img="images/footer-bg.png">
     <div class="container pb-70">
@@ -417,6 +495,171 @@
             </div>
           </div> -->
 
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- certificate-->
+  <section class="bg-silver-light">
+    <div class="container">
+      <div class="section-title">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tm-sc-section-title section-title text-center">
+              <div class="title-wrapper">
+                <h6 class="subtitle text-theme-colored1">Our Certificate</h6>
+                <!-- <h2 class="title">What We’re offering</h2> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="tm-sc-testimonials tm-sc-testimonials-carousel testimonial-style7-current-theme owl-dots-dark-skin owl-dots-center owl-nav-outer">
+              <div class="owl-carousel owl-theme tm-owl-carousel-3col" data-dots="true" data-autoplay="true" data-loop="true" data-duration="6000" data-smartspeed="300" data-margin="30" data-stagepadding="0">
+                <div class="tm-carousel-item">
+                  <div class="tm-testimonial">
+                    <div class="testimonial-inner">
+                      <div class="testimonial-author-details">
+                        <div class="testimonial-header">
+                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
+                            presume this is a very productive and professional industry. I wish very good luck &
+                            success for this industry</div>
+                        </div>
+                        <div class="testimonial-footer mt-30">
+                          <div class="testimonial-image-holder">
+                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment1.jpg" class="img-fullwidth rounded-circle" alt="images" /></div>
+                          </div>
+                          <div class="author-info">
+                            <h5 class="name">Jim Grace</h5>
+                            <span class="job-position">Developer</span> <a class="company-url" href="#"></a>
+                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tm-carousel-item">
+                  <div class="tm-testimonial">
+                    <div class="testimonial-inner">
+                      <div class="testimonial-author-details">
+                        <div class="testimonial-header">
+                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
+                            presume this is a very productive and professional industry. I wish very good luck &
+                            success for this industry</div>
+                        </div>
+                        <div class="testimonial-footer mt-30">
+                          <div class="testimonial-image-holder">
+                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment1.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
+                          </div>
+                          <div class="author-info">
+                            <h5 class="name">Catherine Grace</h5>
+                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
+                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tm-carousel-item">
+                  <div class="tm-testimonial">
+                    <div class="testimonial-inner">
+                      <div class="testimonial-author-details">
+                        <div class="testimonial-header">
+                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
+                            presume this is a very productive and professional industry. I wish very good luck &
+                            success for this industry</div>
+                        </div>
+                        <div class="testimonial-footer mt-30">
+                          <div class="testimonial-image-holder">
+                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment2.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
+                          </div>
+                          <div class="author-info">
+                            <h5 class="name">Catherine Grace</h5>
+                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
+                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tm-carousel-item">
+                  <div class="tm-testimonial">
+                    <div class="testimonial-inner">
+                      <div class="testimonial-author-details">
+                        <div class="testimonial-header">
+                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
+                            presume this is a very productive and professional industry. I wish very good luck &
+                            success for this industry</div>
+                        </div>
+                        <div class="testimonial-footer mt-30">
+                          <div class="testimonial-image-holder">
+                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment3.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
+                          </div>
+                          <div class="author-info">
+                            <h5 class="name">Catherine Grace</h5>
+                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
+                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tm-carousel-item">
+                  <div class="tm-testimonial">
+                    <div class="testimonial-inner">
+                      <div class="testimonial-author-details">
+                        <div class="testimonial-header">
+                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
+                            presume this is a very productive and professional industry. I wish very good luck &
+                            success for this industry</div>
+                        </div>
+                        <div class="testimonial-footer mt-30">
+                          <div class="testimonial-image-holder">
+                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment3.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
+                          </div>
+                          <div class="author-info">
+                            <h5 class="name">Catherine Grace</h5>
+                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
+                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tm-carousel-item">
+                  <div class="tm-testimonial">
+                    <div class="testimonial-inner">
+                      <div class="testimonial-author-details">
+                        <div class="testimonial-header">
+                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
+                            presume this is a very productive and professional industry. I wish very good luck &
+                            success for this industry</div>
+                        </div>
+                        <div class="testimonial-footer mt-30">
+                          <div class="testimonial-image-holder">
+                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment3.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
+                          </div>
+                          <div class="author-info">
+                            <h5 class="name">Catherine Grace</h5>
+                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
+                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

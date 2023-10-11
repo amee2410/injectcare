@@ -69,7 +69,7 @@
                                                         <tr>
                                                             @foreach($data as $d)
                                                             <td>{{$d->id}}</td>
-                                                            <td>{{$d->cat_name}}</td>
+                                                            <td>{{$d->category_name}}</td>
                                                             <td> 
                                                             <form action="{{route('Category.destroy',$d->id)}}" method="Post">
                                                                 <a class="btn btn-primary" href="{{route('Category.edit',$d->id)}}">Edit</a>

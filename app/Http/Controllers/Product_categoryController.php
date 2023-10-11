@@ -32,21 +32,12 @@ class Product_categoryController extends Controller
     public function store(Request $request)
     {
         $validator = \Validator::make($request->all(), [
-            'category_name' => 'required',
-            'category_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'category_name' => 'required',            
             'slug' => 'required',
         ]);
 
         $data = new product_category();
-        $filename = "";
-        $destinationPath = public_path('Backend/images/product_category/');
-        $status = true;
-        if ($request->hasFile('category_image')) {
-            $files = $request->file('category_image');
-            $filename="Category image-".strtotime(date('d-m-Y h:i:s')).".".$files->getClientOriginalExtension();
-            $data->category_image = $filename;
-            $files->move($destinationPath,$filename);            
-        }  
+       
             $data->category_name = $request->category_name;
             $data->slug = $request->slug;
             
@@ -79,26 +70,11 @@ class Product_categoryController extends Controller
     {
         $validator = \Validator::make($request->all(), [
             'category_name' => 'required',
-            'category_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            
             'slug' => 'required',
         ]);
 
-            $data = product_category::find($id);
-
-            $filename = "";
-            $destinationPath = public_path('Backend/images/product_category/');
-            if ($request->hasFile('category_image')) {
-                $files = $request->file('category_image');
-                //Remove Old Image    
-                $usersImage = public_path("Backend/images/product_category/$data->category_image"); // get previous image from folder
-                if (File::exists($usersImage)) {
-                File::delete($usersImage);
-                }
-                //Upload Image
-                $filename="Category image-".strtotime(date('d-m-Y h:i:s')).".".$files->getClientOriginalExtension();
-                $data->category_image = $filename;
-                $files->move($destinationPath,$filename);
-            }
+            $data = product_category::find($id);           
             
             $data->category_name = $request->category_name;
             $data->slug = $request->slug;
