@@ -4,19 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\client;
+use App\Models\certificate;
 use File;
 
-
-class ClientsController extends Controller
+class CertificateController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
-    {       
-        $data = DB::table('clients')->select('*')->get();
-        return view('Backend.Clients.list',compact('data'));
+    {
+        $data = DB::table('certificates')->select('*')->get();
+        return view('Backend.Certificate.list',compact('data'));
     }
 
     /**
@@ -24,7 +23,7 @@ class ClientsController extends Controller
      */
     public function create()
     {
-        return view('Backend.CLients.create');
+        return view('Backend.Certificate.create');
     }
 
     /**
@@ -37,14 +36,14 @@ class ClientsController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-            $data = new client();
+            $data = new certificate();
 
             $filename = "";
-            $destinationPath = public_path('Backend/images/client/');
+            $destinationPath = public_path('Backend/images/certificate/');
             $status = true;
             if ($request->hasFile('image')) {
                 $files = $request->file('image');
-                $filename="Client-".strtotime(date('d-m-Y h:i:s')).".".$files->getClientOriginalExtension();
+                $filename="Certificate-".strtotime(date('d-m-Y h:i:s')).".".$files->getClientOriginalExtension();
                 $data->image = $filename;
                 $files->move($destinationPath,$filename);
                 
@@ -53,7 +52,7 @@ class ClientsController extends Controller
             
             $data->save();
 
-            return redirect('Clients')->with('success', 'Record Inserted Successfully');
+            return redirect('Certificate')->with('success', 'Record Inserted Successfully');
     }
 
     /**
@@ -69,8 +68,8 @@ class ClientsController extends Controller
      */
     public function edit(string $id)
     {
-        $data = client::find($id);
-        return view('Backend.Clients.edit', compact('data'));
+        $data = certificate::find($id);
+        return view('Backend.Certificate.edit', compact('data'));
     }
 
     /**
@@ -83,25 +82,25 @@ class ClientsController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-            $data = client::find($id);
+            $data = certificate::find($id);
             $filename = "";
-            $destinationPath = public_path('Backend/images/client/');
+            $destinationPath = public_path('Backend/images/certificate/');
             if ($request->hasFile('image')) {
                 $files = $request->file('image');
                 //Remove Old Image    
-                $usersImage = public_path("Backend/images/client/$data->image"); // get previous image from folder
+                $usersImage = public_path("Backend/images/certificate/$data->image"); // get previous image from folder
                 if (File::exists($usersImage)) {
                 File::delete($usersImage);
                 }
                 //Upload Image
-                $filename="Client-".strtotime(date('d-m-Y h:i:s')).".".$files->getClientOriginalExtension();
+                $filename="Certificate-".strtotime(date('d-m-Y h:i:s')).".".$files->getClientOriginalExtension();
                 $data->image = $filename;
                 $files->move($destinationPath,$filename);
             }
             $data->name = $request->name;
             $data->save();
 
-            return redirect('Clients')->with('success', 'Record Inserted Successfully');
+            return redirect('Certificate')->with('success', 'Record Inserted Successfully');
     }
 
     /**
@@ -109,7 +108,7 @@ class ClientsController extends Controller
      */
     public function destroy(string $id)
     {
-        $data = client::find($id)->delete();
-        return redirect('Clients');
+        $data = certificate::find($id)->delete();
+        return redirect('Certificate');
     }
 }

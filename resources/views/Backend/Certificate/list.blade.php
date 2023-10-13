@@ -61,6 +61,7 @@
                                                     <thead>
                                                         <tr style="text-transform: capitalize;">
                                                             <th>Id</th>
+                                                            <td>Name</td>
                                                             <th>Image</th>
                                                             <th>Action</th>
                                                         </tr>
@@ -69,6 +70,7 @@
                                                         <tr>
                                                         @foreach($data as $d)
                                                             <td>{{$d->id}}</td>
+                                                            <td>{{$d->name}}</td>
                                                             <td><img src="{{ asset('/Backend/images/certificate/'.$d->image) }}" alt="Image" title="Image" width="250px" height="200px"></td>
                                                             <td> 
                                                             <form action="{{route('Certificate.destroy',$d->id)}}" method="Post">

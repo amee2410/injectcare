@@ -1,8 +1,8 @@
 @php
     $html_tag_data = [];
-    $title = 'Clients';
+    $title = 'Products';
     $description = 'Settings.';
-    $breadcrumbs = ["/home"=>"Home", "/Clients"=>"Clients"]
+    $breadcrumbs = ["/home"=>"Home", "/Products"=>"Products"]
 @endphp
 @extends('Backend.layout.layout',[
 'html_tag_data'=>$html_tag_data,
@@ -50,7 +50,7 @@
                                     <div class="col-sm-12">
                                         <div class="card">
                                             <div class="card-header">
-                                                <a href="{{route('Clients.create')}}" class="btn btn-out waves-effect waves-light btn-inverse btn-square">Create</a>
+                                                <a href="{{route('Products.create')}}" class="btn btn-out waves-effect waves-light btn-inverse btn-square">Create</a>
                                                 <!-- <h5>Column Selectors</h5>
                                                 <span class="m-b-20">All of the data export buttons have a exportOptions option which can be used to specify information about what data should be exported and how. The options given for this parameter are passed directly to the buttons.exportData() method to obtain the required data.</span>
                                                 <span>One of the most commonly used is the columns option which defines the columns that should be used as part of the export. This is given as a column-selector, making it simple to tell it if you want only visible columns, or a mix of the columns available.</span> -->
@@ -61,20 +61,20 @@
                                                     <thead>
                                                         <tr style="text-transform: capitalize;">
                                                             <th>Id</th>
-                                                            <th>Name</th>
+                                                            <th>Product Name</th>
                                                             <th>Image</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                        @foreach($data as $d)
+                                                            @foreach($data as $d)
                                                             <td>{{$d->id}}</td>
-                                                            <td>{{$d->name}}</td>
-                                                            <td><img src="{{ asset('/Backend/images/client/'.$d->image) }}" alt="Image" title="Image" width="250px" height="200px"></td>
+                                                            <td>{{$d->product_name}}</td>
+                                                            <td><img src="{{ asset('/Backend/images/products/'.$d->image) }}" alt="Image" title="Image" width="300px" height="250px"></td>
                                                             <td> 
-                                                            <form action="{{route('Clients.destroy',$d->id)}}" method="Post">
-                                                                <a class="btn btn-primary" href="{{route('Clients.edit',$d->id)}}">Edit</a>
+                                                            <form action="{{route('Products.destroy',$d->id)}}" method="Post">
+                                                                <a class="btn btn-primary" href="{{route('Products.edit',$d->id)}}">Edit</a>
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <button type="submit" class="btn btn-danger">Delete</button>

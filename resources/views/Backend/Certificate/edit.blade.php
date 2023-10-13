@@ -64,10 +64,16 @@
                                              <form id="main" action="{{route('Certificate.update',$data->id)}}" method="POST" enctype="multipart/form-data" >
                                                 @method('PUT') 
                                                 @csrf
-
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Name</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="name" id="p_name" placeholder="Name" value="{{$data->name}}">
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
                                                 
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (189 X 126px)</h6></label>
+                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (400 X 400px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="image" id="p_img">
                                                       <span class="messages"></span>

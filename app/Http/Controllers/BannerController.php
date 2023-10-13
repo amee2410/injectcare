@@ -120,8 +120,7 @@ class BannerController extends Controller
                 $data->title2 = $request->title2;
                 $data->title3 = $request->title3;
                 $data->read_more_link = $request->read_more_link;
-                $data->contact_us_link = $request->contact_us_link;
-                $data->save();
+                $data->contact_us_link = $request->contact_us_link;               
                 
                 $data->save();
 

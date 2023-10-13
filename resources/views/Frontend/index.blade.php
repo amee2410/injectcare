@@ -383,102 +383,104 @@
       <div class="section-content">
         <div class="row">
           <div class="col-sm-12">
-            <div class="tm-sc-testimonials tm-sc-testimonials-carousel testimonial-style7-current-theme owl-dots-dark-skin owl-dots-center owl-nav-outer">
-              <div class="owl-carousel owl-theme tm-owl-carousel-3col" data-dots="true" data-autoplay="true" data-loop="true" data-duration="6000" data-smartspeed="300" data-margin="30" data-stagepadding="0">
-                <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
-                  <div class="tm-staff">
-                    <div class="staff-inner">
-                      <div class="thumb">
-                        <img src="{{asset('assets/images/team/1.jpg')}}" alt="Image">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
-                  <div class="tm-staff">
-                    <div class="staff-inner">
-                      <div class="thumb">
-                        <img src="images/team/1.jpg" alt="Image">
-                        <div class="staff-social-links">
-                          <ul>
-                            <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
-                            <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a target="_blank" href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="staff-content">
-                        <h4 class="name text-black-333"><a href="page-team-details.html">David James</a></h4>
-                        <div class="speciality">Consultant</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
-                  <div class="tm-staff">
-                    <div class="staff-inner">
-                      <div class="thumb">
-                        <img src="images/team/1.jpg" alt="Image">
-                        <div class="staff-social-links">
-                          <ul>
-                            <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
-                            <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a target="_blank" href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="staff-content">
-                        <h4 class="name text-black-333"><a href="page-team-details.html">David James</a></h4>
-                        <div class="speciality">Consultant</div>
-                      </div>
+            <!-- <div class="tm-sc-testimonials tm-sc-testimonials-carousel testimonial-style7-current-theme owl-dots-dark-skin owl-dots-center owl-nav-outer"> -->
+            <div class="owl-carousel owl-theme tm-owl-carousel-3col" data-dots="true" data-autoplay="true" data-loop="true" data-duration="6000" data-smartspeed="300" data-margin="30" data-stagepadding="0">
+              @foreach($clients as $client)
+              <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+                <div class="tm-staff">
+                  <div class="staff-inner" style="width: 295px; height: 382px;">
+                    <div class="thumb">
+                      <img src="{{asset('Backend/images/client/'.$client->image)}}" alt="Image">
                     </div>
                   </div>
                 </div>
               </div>
+              @endforeach
+              <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+                <div class="tm-staff">
+                  <div class="staff-inner">
+                    <div class="thumb">
+                      <img src="images/team/1.jpg" alt="Image">
+                      <div class="staff-social-links">
+                        <ul>
+                          <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="staff-content">
+                      <h4 class="name text-black-333"><a href="page-team-details.html">David James</a></h4>
+                      <div class="speciality">Consultant</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+                <div class="tm-staff">
+                  <div class="staff-inner">
+                    <div class="thumb">
+                      <img src="images/team/1.jpg" alt="Image">
+                      <div class="staff-social-links">
+                        <ul>
+                          <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="staff-content">
+                      <h4 class="name text-black-333"><a href="page-team-details.html">David James</a></h4>
+                      <div class="speciality">Consultant</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+<!-- Section: Team -->
+<section class="bg-theme-colored2" data-tm-bg-img="{{asset('assets/images/footer-bg.png')}}">
+  <div class="container pb-70">
+    <div class="section-title">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tm-sc-section-title section-title text-center">
+            <div class="title-wrapper">
+              <h6 class="subtitle text-theme-colored1">Our Team</h6>
+              <h2 class="title text-white">What We’re Serving</h2>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- Section: Team -->
-  <section class="bg-theme-colored2" data-tm-bg-img="images/footer-bg.png">
-    <div class="container pb-70">
-      <div class="section-title">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="tm-sc-section-title section-title text-center">
-              <div class="title-wrapper">
-                <h6 class="subtitle text-theme-colored1">Our Team</h6>
-                <h2 class="title text-white">What We’re Serving</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-content pb-40">
-        <div class="row">
-          @foreach($team as $t)
-          <div class="col-md-6 col-lg-6 col-xl-6">
-            <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
-              <div class="tm-staff">
-                <div class="staff-inner">
-                  <div class="thumb">
-                    <img src="{{asset('Backend/images/team/'.$t->image)}}" alt="Image">
+    <div class="section-content pb-40">
+      <div class="row">
+        @foreach($team as $t)
+        <div class="col-md-6 col-lg-6 col-xl-6">
+          <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+            <div class="tm-staff">
+              <div class="staff-inner">
+                <div class="thumb">
+                  <img src="{{asset('Backend/images/team/'.$t->image)}}" alt="Image">
 
-                  </div>
-                  <div class="staff-content">
-                    <h4 class="name"><a href="#">{{$t->name}}</a></h4>
-                    <div class="speciality">{{$t->designation}}</div>
-                  </div>
+                </div>
+                <div class="staff-content">
+                  <h4 class="name"><a href="#">{{$t->name}}</a></h4>
+                  <div class="speciality">{{$t->designation}}</div>
                 </div>
               </div>
             </div>
           </div>
-          @endforeach
-          <!-- <div class="col-md-6 col-lg-6 col-xl-6">
+        </div>
+        @endforeach
+        <!-- <div class="col-md-6 col-lg-6 col-xl-6">
             <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
               <div class="tm-staff">
                 <div class="staff-inner">
@@ -495,165 +497,79 @@
             </div>
           </div> -->
 
-        </div>
       </div>
     </div>
-  </section>
-  <!-- certificate-->
-  <section class="bg-silver-light">
-    <div class="container">
-      <div class="section-title">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="tm-sc-section-title section-title text-center">
-              <div class="title-wrapper">
-                <h6 class="subtitle text-theme-colored1">Our Certificate</h6>
-                <!-- <h2 class="title">What We’re offering</h2> -->
-              </div>
+  </div>
+</section>
+<!-- certificate-->
+<section class="bg-silver-light">
+  <div class="container">
+    <div class="section-title">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tm-sc-section-title section-title text-center">
+            <div class="title-wrapper">
+              <!-- <h6 class="subtitle text-theme-colored1"></h6> -->
+              <h2 class="title">Our Certificate</h2>
             </div>
           </div>
         </div>
       </div>
-      <div class="section-content">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="tm-sc-testimonials tm-sc-testimonials-carousel testimonial-style7-current-theme owl-dots-dark-skin owl-dots-center owl-nav-outer">
-              <div class="owl-carousel owl-theme tm-owl-carousel-3col" data-dots="true" data-autoplay="true" data-loop="true" data-duration="6000" data-smartspeed="300" data-margin="30" data-stagepadding="0">
-                <div class="tm-carousel-item">
-                  <div class="tm-testimonial">
-                    <div class="testimonial-inner">
-                      <div class="testimonial-author-details">
-                        <div class="testimonial-header">
-                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
-                            presume this is a very productive and professional industry. I wish very good luck &
-                            success for this industry</div>
-                        </div>
-                        <div class="testimonial-footer mt-30">
-                          <div class="testimonial-image-holder">
-                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment1.jpg" class="img-fullwidth rounded-circle" alt="images" /></div>
-                          </div>
-                          <div class="author-info">
-                            <h5 class="name">Jim Grace</h5>
-                            <span class="job-position">Developer</span> <a class="company-url" href="#"></a>
-                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
-                          </div>
-                        </div>
-                      </div>
+    </div>
+    <div class="section-content">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="tm-sc-testimonials tm-sc-testimonials-carousel testimonial-style7-current-theme owl-dots-dark-skin owl-dots-center owl-nav-outer">
+          <div class="owl-carousel owl-theme tm-owl-carousel-3col" data-dots="true" data-autoplay="true" data-loop="true" data-duration="6000" data-smartspeed="300" data-margin="30" data-stagepadding="0">
+              @foreach($certificate as $certi)
+              <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+                <div class="tm-staff">
+                  <div class="staff-inner" style="width: 295px; height: 382px;">
+                    <div class="thumb">
+                      <img src="{{asset('Backend/images/certificate/'.$certi->image)}}" alt="Image">
                     </div>
                   </div>
                 </div>
-                <div class="tm-carousel-item">
-                  <div class="tm-testimonial">
-                    <div class="testimonial-inner">
-                      <div class="testimonial-author-details">
-                        <div class="testimonial-header">
-                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
-                            presume this is a very productive and professional industry. I wish very good luck &
-                            success for this industry</div>
-                        </div>
-                        <div class="testimonial-footer mt-30">
-                          <div class="testimonial-image-holder">
-                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment1.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
-                          </div>
-                          <div class="author-info">
-                            <h5 class="name">Catherine Grace</h5>
-                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
-                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
-                          </div>
-                        </div>
+              </div>
+              @endforeach
+              <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+                <div class="tm-staff">
+                  <div class="staff-inner">
+                    <div class="thumb">
+                      <img src="images/team/1.jpg" alt="Image">
+                      <div class="staff-social-links">
+                        <ul>
+                          <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        </ul>
                       </div>
+                    </div>
+                    <div class="staff-content">
+                      <h4 class="name text-black-333"><a href="page-team-details.html">David James</a></h4>
+                      <div class="speciality">Consultant</div>
                     </div>
                   </div>
                 </div>
-                <div class="tm-carousel-item">
-                  <div class="tm-testimonial">
-                    <div class="testimonial-inner">
-                      <div class="testimonial-author-details">
-                        <div class="testimonial-header">
-                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
-                            presume this is a very productive and professional industry. I wish very good luck &
-                            success for this industry</div>
-                        </div>
-                        <div class="testimonial-footer mt-30">
-                          <div class="testimonial-image-holder">
-                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment2.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
-                          </div>
-                          <div class="author-info">
-                            <h5 class="name">Catherine Grace</h5>
-                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
-                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
-                          </div>
-                        </div>
+              </div>
+              <div class="tm-sc-staff staff-style-current-theme mb-lg-50">
+                <div class="tm-staff">
+                  <div class="staff-inner">
+                    <div class="thumb">
+                      <img src="images/team/1.jpg" alt="Image">
+                      <div class="staff-social-links">
+                        <ul>
+                          <li><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
+                          <li><a target="_blank" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        </ul>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="tm-carousel-item">
-                  <div class="tm-testimonial">
-                    <div class="testimonial-inner">
-                      <div class="testimonial-author-details">
-                        <div class="testimonial-header">
-                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
-                            presume this is a very productive and professional industry. I wish very good luck &
-                            success for this industry</div>
-                        </div>
-                        <div class="testimonial-footer mt-30">
-                          <div class="testimonial-image-holder">
-                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment3.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
-                          </div>
-                          <div class="author-info">
-                            <h5 class="name">Catherine Grace</h5>
-                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
-                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tm-carousel-item">
-                  <div class="tm-testimonial">
-                    <div class="testimonial-inner">
-                      <div class="testimonial-author-details">
-                        <div class="testimonial-header">
-                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
-                            presume this is a very productive and professional industry. I wish very good luck &
-                            success for this industry</div>
-                        </div>
-                        <div class="testimonial-footer mt-30">
-                          <div class="testimonial-image-holder">
-                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment3.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
-                          </div>
-                          <div class="author-info">
-                            <h5 class="name">Catherine Grace</h5>
-                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
-                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tm-carousel-item">
-                  <div class="tm-testimonial">
-                    <div class="testimonial-inner">
-                      <div class="testimonial-author-details">
-                        <div class="testimonial-header">
-                          <div class="author-text"> I feel very happy and be proud to connect with this industry. I
-                            presume this is a very productive and professional industry. I wish very good luck &
-                            success for this industry</div>
-                        </div>
-                        <div class="testimonial-footer mt-30">
-                          <div class="testimonial-image-holder">
-                            <div class="author-thumb"> <img width="75" height="75" src="images/shop/comment3.jpg" class="img-fullwidth rounded-circle wp-post-image" alt="images" /></div>
-                          </div>
-                          <div class="author-info">
-                            <h5 class="name">Catherine Grace</h5>
-                            <span class="job-position">Designer</span> <a class="company-url" href="#"></a>
-                            <div class="star-rating"> <span data-tm-width="90%"></span></div>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="staff-content">
+                      <h4 class="name text-black-333"><a href="page-team-details.html">David James</a></h4>
+                      <div class="speciality">Consultant</div>
                     </div>
                   </div>
                 </div>
@@ -663,228 +579,229 @@
         </div>
       </div>
     </div>
-  </section>
-  <!-- Start Book Now -->
-  <section>
-    <div class="container-fluid p-0">
-      <div class="tm-sc-custom-columns-holder tm-cc-two-columns tm-cc-responsive-mode-1280">
-        <div class="tm-sc-custom-columns-holder-item bg-img-left" data-item-class="tm-custom-columns-11" data-tm-bg-img="images/bg/divider.jpg" data-1200-up="80px 15% 70px 15%" data-1199-down="80px 10% 70px 10%" data-991-down="80px 10% 70px 10%" data-767-down="80px 10% 70px 10%" data-575-down="80px 10% 70px 10%">
-          <div class="tm-sc-section-title section-title section-title-light mb-0 text-center">
-            <div class="box-hover-effect tm-sc-video-popup tm-sc-video-popup-css-button mb-30">
-              <div class="effect-wrapper d-flex align-items-center">
-                <div class="animated-css-play-button"><span class="play-icon"><i class="fa fa-play"></i></span></div>
-                <a class="hover-link" data-lightbox-gallery="youtube-video" href="https://www.youtube.com/watch?v=xcJtL7QggTI" title=""></a>
-              </div>
-            </div>
-          </div>
-          <div class="item-inner">
-            <div class="item-content tm-custom-columns-11">
+  </div>
+</section>
+<!-- Start Book Now -->
+<section>
+  <div class="container-fluid p-0">
+    <div class="tm-sc-custom-columns-holder tm-cc-two-columns tm-cc-responsive-mode-1280">
+      <div class="tm-sc-custom-columns-holder-item bg-img-left" data-item-class="tm-custom-columns-11" data-tm-bg-img="{{asset('assets/images/bg/divider.jpg')}}" data-1200-up="80px 15% 70px 15%" data-1199-down="80px 10% 70px 10%" data-991-down="80px 10% 70px 10%" data-767-down="80px 10% 70px 10%" data-575-down="80px 10% 70px 10%">
+        <div class="tm-sc-section-title section-title section-title-light mb-0 text-center">
+          <div class="box-hover-effect tm-sc-video-popup tm-sc-video-popup-css-button mb-30">
+            <div class="effect-wrapper d-flex align-items-center">
+              <div class="animated-css-play-button"><span class="play-icon"><i class="fa fa-play"></i></span></div>
+              <a class="hover-link" data-lightbox-gallery="youtube-video" href="https://www.youtube.com/watch?v=13-sRRCh2LU&t=2s" title=""></a>
             </div>
           </div>
         </div>
-        <div class="tm-sc-custom-columns-holder-item bg-theme-colored1" data-item-class="tm-custom-columns-12" data-1200-up="100px 15% 100px 15%" data-1199-down="100px 10% 100px 10%" data-991-down="100px 10% 100px 10%" data-767-down="100px 10% 100px 10%" data-575-down="100px 10% 100px 10%">
-          <div class="item-inner">
-            <div class="item-content tm-custom-columns-12">
-              <!-- Contact Form -->
-              <div class="book-now-form">
-                <h6 class="mt-0 font-italic sub-title-icon white-icon text-white">Contact With Us</h6>
-                <h2 class="text-white mb-40">Write a Message</h2>
-                <form id="contact_form" name="contact_form" class="" action="https://kodesolution.com/html/2021/medikx-html/includes/sendmail.php" method="post">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="mb-3">
-                        <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="mb-3">
-                        <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="mb-3">
-                        <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="mb-3">
-                        <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
-                      </div>
-                    </div>
-                    <div class="col-sm-12">
-                      <div class="mb-3">
-                        <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
-                      </div>
+        <div class="item-inner">
+          <div class="item-content tm-custom-columns-11">
+          </div>
+        </div>
+      </div>
+      <div class="tm-sc-custom-columns-holder-item bg-theme-colored1" data-item-class="tm-custom-columns-12" data-1200-up="100px 15% 100px 15%" data-1199-down="100px 10% 100px 10%" data-991-down="100px 10% 100px 10%" data-767-down="100px 10% 100px 10%" data-575-down="100px 10% 100px 10%">
+        <div class="item-inner">
+          <div class="item-content tm-custom-columns-12">
+            <!-- Contact Form -->
+            <div class="book-now-form">
+              <h6 class="mt-0 font-italic sub-title-icon white-icon text-white">Contact With Us</h6>
+              <h2 class="text-white mb-40">Write a Message</h2>
+              <form id="contact_form" name="contact_form" class="" action="" method="post">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
                     </div>
                   </div>
-                  <div class="mb-3">
-                    <textarea name="form_message" class="form-control required" rows="6" placeholder="Enter Message"></textarea>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                    </div>
                   </div>
-                  <div class="mb-3 mb-0">
-                    <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                    <button type="submit" class="btn btn-flat btn-theme-colored2 text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" data-loading-text="Please wait...">Send a message</button>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
+                    </div>
                   </div>
-                </form>
-                <!-- Contact Form Validation-->
-                <script>
-                  (function($) {
-                    $("#contact_form").validate({
-                      submitHandler: function(form) {
-                        var form_btn = $(form).find('button[type="submit"]');
-                        var form_result_div = '#form-result';
-                        $(form_result_div).remove();
-                        form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                        var form_btn_old_msg = form_btn.html();
-                        form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                        $(form).ajaxSubmit({
-                          dataType: 'json',
-                          success: function(data) {
-                            if (data.status == 'true') {
-                              $(form).find('.form-control').val('');
-                            }
-                            form_btn.prop('disabled', false).html(form_btn_old_msg);
-                            $(form_result_div).html(data.message).fadeIn('slow');
-                            setTimeout(function() {
-                              $(form_result_div).fadeOut('slow')
-                            }, 6000);
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="mb-3">
+                      <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <textarea name="form_message" class="form-control required" rows="6" placeholder="Enter Message"></textarea>
+                </div>
+                <div class="mb-3 mb-0">
+                  <input name="form_botcheck" class="form-control" type="hidden" value="" />
+                  <button type="submit" class="btn btn-flat btn-theme-colored2 text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" data-loading-text="Please wait...">Send a message</button>
+                </div>
+              </form>
+              <!-- Contact Form Validation-->
+              <script>
+                (function($) {
+                  $("#contact_form").validate({
+                    submitHandler: function(form) {
+                      var form_btn = $(form).find('button[type="submit"]');
+                      var form_result_div = '#form-result';
+                      $(form_result_div).remove();
+                      form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                      var form_btn_old_msg = form_btn.html();
+                      form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                      $(form).ajaxSubmit({
+                        dataType: 'json',
+                        success: function(data) {
+                          if (data.status == 'true') {
+                            $(form).find('.form-control').val('');
                           }
-                        });
-                      }
-                    });
-                  })(jQuery);
-                </script>
+                          form_btn.prop('disabled', false).html(form_btn_old_msg);
+                          $(form_result_div).html(data.message).fadeIn('slow');
+                          setTimeout(function() {
+                            $(form_result_div).fadeOut('slow')
+                          }, 6000);
+                        }
+                      });
+                    }
+                  });
+                })(jQuery);
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Book Now -->
+
+<!-- Section: News -->
+<section class="bg-silver-light">
+  <div class="container" data-tm-padding-bottom="235px">
+    <div class="section-title">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="tm-sc-section-title section-title">
+            <div class="title-wrapper">
+              <h6 class="title-icon-left text-theme-colored1 m-0">From the Blog</h6>
+              <h2 class="mt-0 mb-0">Latest news & articles directly coming from blog</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-tm-margin-top="-235px">
+  <div class="container pt-0">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="blog-style1-current-theme mb-30">
+            <article class="post">
+              <div class="entry-header">
+                <div class="post-thumb">
+                  <div class="thumb"> <img class="w-100" src="{{asset('assets/images/blog/1.jpg')}}" alt="Image"></div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Book Now -->
-
-  <!-- Section: News -->
-  <section class="bg-silver-light">
-    <div class="container" data-tm-padding-bottom="235px">
-      <div class="section-title">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="tm-sc-section-title section-title">
-              <div class="title-wrapper">
-                <h6 class="title-icon-left text-theme-colored1 m-0">From the Blog</h6>
-                <h2 class="mt-0 mb-0">Latest news & articles directly coming from blog</h2>
+              <div class="entry-content">
+                <div class="entry-meta">
+                  <h4 class="entry-title mt-0 mb-20"><a href="news-details.html" rel="bookmark">Oral Contraceptive Pills Protect Against</a></h4>
+                  <div class="post-excerpt mb-20">
+                    <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
+                  </div>
+                  <div class="post-meta">
+                    <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
+                    <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
+                    <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
               </div>
-            </div>
+            </article>
           </div>
-          <div class="col"></div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="blog-style1-current-theme mb-30">
+            <article class="post">
+              <div class="entry-header">
+                <div class="post-thumb">
+                  <div class="thumb"> <img class="w-100" src="images/blog/2.jpg" alt="Image"></div>
+                </div>
+              </div>
+              <div class="entry-content">
+                <div class="entry-meta">
+                  <h4 class="entry-title mt-0 mb-20"><a href="news-details.html" rel="bookmark">Reducing the Side-Effects of Prostate Hormone</a></h4>
+                  <div class="post-excerpt mb-20">
+                    <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
+                  </div>
+                  <div class="post-meta">
+                    <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
+                    <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
+                    <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="blog-style1-current-theme mb-30">
+            <article class="post">
+              <div class="entry-header">
+                <div class="post-thumb">
+                  <div class="thumb"> <img class="w-100" src="images/blog/3.jpg" alt="Image"></div>
+                </div>
+              </div>
+              <div class="entry-content">
+                <div class="entry-meta">
+                  <h4 class="entry-title mt-0 mb-20"><a href="news-details.html" rel="bookmark">Schoolchildren Unlikely to Transmit SARS</a></h4>
+                  <div class="post-excerpt mb-20">
+                    <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
+                  </div>
+                  <div class="post-meta">
+                    <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
+                    <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
+                    <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section data-tm-margin-top="-235px">
-    <div class="container pt-0">
-      <div class="section-content">
-        <div class="row">
-          <div class="col-md-6 col-lg-6 col-xl-4">
-            <div class="blog-style1-current-theme mb-30">
-              <article class="post">
-                <div class="entry-header">
-                  <div class="post-thumb">
-                    <div class="thumb"> <img class="w-100" src="images/blog/1.jpg" alt="Image"></div>
-                  </div>
-                </div>
-                <div class="entry-content">
-                  <div class="entry-meta">
-                    <h4 class="entry-title mt-0 mb-20"><a href="news-details.html" rel="bookmark">Oral Contraceptive Pills Protect Against</a></h4>
-                    <div class="post-excerpt mb-20">
-                      <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
-                      <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
-                      <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-6 col-xl-4">
-            <div class="blog-style1-current-theme mb-30">
-              <article class="post">
-                <div class="entry-header">
-                  <div class="post-thumb">
-                    <div class="thumb"> <img class="w-100" src="images/blog/2.jpg" alt="Image"></div>
-                  </div>
-                </div>
-                <div class="entry-content">
-                  <div class="entry-meta">
-                    <h4 class="entry-title mt-0 mb-20"><a href="news-details.html" rel="bookmark">Reducing the Side-Effects of Prostate Hormone</a></h4>
-                    <div class="post-excerpt mb-20">
-                      <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
-                      <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
-                      <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-6 col-xl-4">
-            <div class="blog-style1-current-theme mb-30">
-              <article class="post">
-                <div class="entry-header">
-                  <div class="post-thumb">
-                    <div class="thumb"> <img class="w-100" src="images/blog/3.jpg" alt="Image"></div>
-                  </div>
-                </div>
-                <div class="entry-content">
-                  <div class="entry-meta">
-                    <h4 class="entry-title mt-0 mb-20"><a href="news-details.html" rel="bookmark">Schoolchildren Unlikely to Transmit SARS</a></h4>
-                    <div class="post-excerpt mb-20">
-                      <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
-                      <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
-                      <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </article>
-            </div>
+<!-- Section: Divider -->
+<section class="bg-theme-colored1">
+  <div class="container pb-70 pt-70">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2 class="text-white">Now! Get a Free Expert Consultation for Your Health</h2>
+        </div>
+        <div class="col-lg-4">
+          <div class="tm-sc-button mt-20 text-start text-lg-end">
+            <a href="#" class="btn btn-light">Contact Us</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Section: Divider -->
-  <section class="bg-theme-colored1">
-    <div class="container pb-70 pt-70">
-      <div class="section-content">
-        <div class="row">
-          <div class="col-lg-8">
-            <h2 class="text-white">Now! Get a Free Expert Consultation for Your Health</h2>
-          </div>
-          <div class="col-lg-4">
-            <div class="tm-sc-button mt-20 text-start text-lg-end">
-              <a href="#" class="btn btn-light">Contact Us</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Divider -->
+  </div>
+</section>
+<!-- End Divider -->
 </div>
 <!-- end main-content -->
 @endsection

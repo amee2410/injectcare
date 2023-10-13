@@ -63,9 +63,15 @@
                                           <div class="card-block" style="text-transform: capitalize;">
                                              <form id="main" action="{{route('Clients.store')}}" method="POST" enctype="multipart/form-data" >
                                                 @csrf
-
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image</label>
+                                                   <label class="col-sm-2 col-form-label">Name</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="name" id="p_name" placeholder="Name" required>
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Image : <h6 style="font-size: 14px; color: red;">Size: (400 X 400 px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="image" id="p_img" required>
                                                       <span class="messages"></span>

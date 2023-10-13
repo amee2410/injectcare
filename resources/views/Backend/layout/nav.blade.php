@@ -137,6 +137,16 @@
                               <span class="pcoded-mtext">Team</span>
                               </a>
                           </li>
+                          <li class="">
+                              <a href="{{url('Clients')}}" class="waves-effect waves-dark">
+                              <span class="pcoded-mtext">Clients</span>
+                              </a>
+                          </li>
+                          <li class="">
+                              <a href="{{url('Certificate')}}" class="waves-effect waves-dark">
+                              <span class="pcoded-mtext">Certificate</span>
+                              </a>
+                          </li>
                       </ul>
                   </li>
                   <li class="pcoded-hasmenu">
@@ -151,7 +161,7 @@
                               </a>
                           </li>
                           <li class="">
-                              <a href="{{url('Mission_Vision')}}" class="waves-effect waves-dark">
+                              <a href="{{url('Products')}}" class="waves-effect waves-dark">
                               <span class="pcoded-mtext">Products</span>
                               </a>
                           </li>

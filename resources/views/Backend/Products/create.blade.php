@@ -1,8 +1,8 @@
 @php
     $html_tag_data = [];
-    $title = 'About DMIT';
+    $title = 'Products';
     $description = 'Settings.';
-    $breadcrumbs = ["/home"=>"Home", "/DMIT"=>"DMIT"]
+    $breadcrumbs = ["/home"=>"Home", "/Products"=>"Products", "#"=>"Create"]
 @endphp
 @extends('Backend.layout.layout',[
 'html_tag_data'=>$html_tag_data,
@@ -57,86 +57,80 @@
                                     <div class="col-sm-12">
                                        <div class="card">
                                           <div class="card-header">
-                                             <h5>About DMIT</h5>
+                                             <h5>Add Product</h5>
                                           </div>
+                                          
                                           <div class="card-block" style="text-transform: capitalize;">
-                                             <form id="main" action="{{route('DMIT.update',$data->id)}}" method="POST" enctype="multipart/form-data" >
-                                                @method('PUT') 
+                                             <form id="main" action="{{route('Products.store')}}" method="POST" enctype="multipart/form-data" >
                                                 @csrf
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Title:</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="title" id="p_name" placeholder="Title" value="{{$data->title}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Sub-Title:</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="subtitle" id="p_name" placeholder="Sub-Title 1" value="{{$data->subtitle}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Sub-Title 1:</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="subtitle1" id="p_name" placeholder="Sub-Title 1" value="{{$data->subtitle1}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Sub-Title 2:</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="subtitle2" id="p_name" placeholder="Sub-Title 2" value="{{$data->subtitle2}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Video Link:</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="video_link" id="p_name" placeholder="Sub-Title 2" value="{{$data->video_link}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Description 1:</label>
-                                                    <div class="col-sm-10">
-                                                      <textarea rows="3" cols="3" class="form-control" name="description1" placeholder="Enter Description">{{$data->description1}}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Description 2:</label>
-                                                    <div class="col-sm-10">
-                                                      <textarea rows="3" cols="3" class="form-control" name="description2" placeholder="Enter Description">{{$data->description2}}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image 1:<h6 style="font-size: 14px; color: red;">Size: (300 X 317px)</h6></label>
-                                                   <div class="col-sm-10">
-                                                      <input type="file" class="form-control" name="image1" id="p_img">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                               <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label"></label>
-                                                   <div class="col-sm-10">
-                                                      <img class="img-fluid card-img-top" style="height: 300px; width: 317px;" src="{{ asset('Backend/images/DMIT/'.$data->image1)}}" alt="Card image cap"><br><br>
-                                                 </div>
-                                               </div>
                                                 
-                                               <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image 2:<h6 style="font-size: 14px; color: red;">Size: (300 X 317px)</h6></label>
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Select Category</label>
                                                    <div class="col-sm-10">
-                                                      <input type="file" class="form-control" name="image2" id="p_img">
+                                                      <select name="category_name" class="form-control" id="category_name">
+                                                      @foreach($category as $c)
+                                                      <option value="{{$c->id}}">{{$c->category_name}}</option>
+                                                      @endforeach
+                                                      </select>
+                                                   </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Product Name</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="text" class="form-control" name="product_name" id="name" placeholder="Name" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                               <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label"></label>
+                                                <div class="form-group row" hidden="hidden">
+                                                   <label class="col-sm-2 col-form-label">Slug</label>
                                                    <div class="col-sm-10">
-                                                      <img class="img-fluid card-img-top" style="height: 300px; width: 317px;" src="{{ asset('Backend/images/DMIT/'.$data->image2)}}" alt="Card image cap"><br><br>
-                                                 </div>
-                                               </div>
+                                                      <input type="text" class="form-control" name="slug" id="slug" placeholder="Slug" required>
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Description</label>
+                                                   <div class="col-sm-10">
+                                                    <textarea class="textarea" rows="3" cols="50" type="text" name="description" class="form-control" placeholder="Enter Description"></textarea>
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Image</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="file" class="form-control" name="image" id="p_img" required>
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Banner Image</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="file" class="form-control" name="banner_image" id="p_img" required>
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Meta Title</label>
+                                                    <div class="col-sm-10">
+                                                       <input type="text" class="form-control" value="Enter Title" name="meta_title">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Meta Keywords</label>
+                                                    <div class="col-sm-10">
+                                                       <input type="text" class="form-control" value="Enter Keywords" name="meta_keywords">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Meta Description</label>
+                                                    <div class="col-sm-10">
+                                                       <input type="text" class="form-control" value="Enter Description" name="meta_description">
+                                                    </div>
+                                                </div>
                                                 <div class="form-group row">
                                                    <label class="col-sm-2"></label>
                                                    <div class="col-sm-10">
@@ -151,7 +145,27 @@
                               </div>
                            </div>
                         </div>
-                     </div>            
+                     </div>
+                     <script src="https://cdn.tiny.cloud/1/w5bi9dkry19hh0hu719ixcti8diunuytmt1udglc5itmtnaf/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+                        <script>
+                        tinymce.init({
+                          selector: '.textarea',
+                          plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+                          toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+                        });
+                      </script>
+                      
+                        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                        <script>
+                        $(document).ready(function(){
+                            $("#name").on("input", function(){
+                                // Print entered value in a div box
+                                    $("#slug").val($(this).val().split(' ').join('_').toLowerCase());
+                
+                            });
+                        });
+                
+                        </script>
 @endsection
 
 
