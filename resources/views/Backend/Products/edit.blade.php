@@ -97,7 +97,7 @@
                                                 </div>
                                                 
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image</label>
+                                                   <label class="col-sm-2 col-form-label">Image: <h6 style="font-size: 14px; color: red;">Size: (450 X 450px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="image" id="p_img">
                                                       <span class="messages"></span>

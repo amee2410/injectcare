@@ -79,47 +79,35 @@
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Short Description</label>
+                                                   <div class="col-sm-10">
+                                                    <textarea class="textarea" rows="3" cols="50" type="text" name="short_desc" class="form-control" placeholder="Enter Description"></textarea>
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Description</label>
                                                    <div class="col-sm-10">
                                                     <textarea class="textarea" rows="3" cols="50" type="text" name="description" class="form-control" placeholder="Enter Description"></textarea>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
+                                                
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Posted By</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="posted_by" id="p_name" placeholder="Posted by" required>
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (370 X 283px)</h6></label>
+                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (415 X 235px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="image" id="p_img" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Alt Tag</label>
+                                                   <label class="col-sm-2 col-form-label">Detail Page Image <h6 style="font-size: 14px; color: red;">Size: (1000 X 650px)</h6></label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="alt_tag" id="p_name" placeholder="alt tag" required>
+                                                      <input type="file" class="form-control" name="large_img" id="p_img" required>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Detail Page Image <h6 style="font-size: 14px; color: red;">Size: (770 X 427px)</h6></label>
-                                                   <div class="col-sm-10">
-                                                      <input type="file" class="form-control" name="detail_image" id="p_img" required>
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Detail Image Alt Tag</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="d_alt_tag" id="p_name" placeholder="alt tag" required>
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
+                                               
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Banner Image <h6 style="font-size: 14px; color: red;">Size: (1894 X 434px)</h6></label>
                                                    <div class="col-sm-10">
@@ -127,13 +115,7 @@
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Banner Image Alt Tag</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="b_alt_tag" id="p_name" placeholder="alt tag" required>
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
+                                                
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Meta Title</label>
                                                     <div class="col-sm-10">

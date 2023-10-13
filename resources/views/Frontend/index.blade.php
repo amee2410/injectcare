@@ -201,58 +201,59 @@
           <div class="col-sm-12">
             <div class="tm-sc-testimonials tm-sc-testimonials-carousel testimonial-style7-current-theme owl-dots-dark-skin owl-dots-center owl-nav-outer">
               <div class="owl-carousel owl-theme tm-owl-carousel-3col" data-dots="true" data-autoplay="true" data-loop="true" data-duration="6000" data-smartspeed="300" data-margin="30" data-stagepadding="0">
+                @foreach($data1 as $p)
                 <div class="isotope-item cat1 cat3">
                   <div class="isotope-item-inner">
                     <div class="product">
                       <div class="product-header">
                         <div class="thumb image-swap">
-                          <a href="shop-product-details.html"><img src="{{asset('assets/images/shop/product.jpg')}}" class="product-main-image img-responsive img-fullwidth" width="300" height="300" alt="product"></a>
-                          <a href="shop-product-details.html"><img src="{{asset('assets/images/shop/product2.jpg')}}" class="product-hover-image img-responsive img-fullwidth" alt="product"></a>
+                          <a href="#"><img src="{{asset('Backend/images/products/'.$p->image)}}" class="product-main-image img-responsive img-fullwidth" width="300" height="300" alt="product"></a>
+                          <a href="#"><img src="{{asset('Backend/images/products/'.$p->image)}}" class="product-hover-image img-responsive img-fullwidth" alt="product"></a>
+                        </div>
+                      </div>
+                      <div class="product-details">
+                        <span class="product-categories"><a href="{{url('products')}}" rel="tag">{{$p->category_name}}</a></span>
+                        <h5 class="product-title"><a href="">{{$p->product_name}}</a></h5>
+                      </div>
+                      <!-- {{route('products.show',$p->slug)}} -->
+                    </div>
+                  </div>
+                </div>
+                @endforeach
+
+                <div class="isotope-item cat1 cat3">
+                  <div class="isotope-item-inner">
+                    <div class="product">
+                      <div class="product-header">
+
+                        <div class="thumb image-swap">
+                          <a href="#"><img src="images/shop/product.jpg" class="product-main-image img-responsive img-fullwidth" width="300" height="300" alt="product"></a>
+
                         </div>
 
                       </div>
                       <div class="product-details">
                         <span class="product-categories"><a href="#" rel="tag">Music</a></span>
-                        <h5 class="product-title"><a href="shop-product-details.html">Product Title</a></h5>
+                        <h5 class="product-title"><a href="#">Product Title</a></h5>
 
                       </div>
                     </div>
                   </div>
                 </div>
-
                 <div class="isotope-item cat1 cat3">
                   <div class="isotope-item-inner">
                     <div class="product">
                       <div class="product-header">
 
                         <div class="thumb image-swap">
-                          <a href="shop-product-details.html"><img src="images/shop/product.jpg" class="product-main-image img-responsive img-fullwidth" width="300" height="300" alt="product"></a>
-
+                          <a href="#"><img src="images/shop/product.jpg" class="product-main-image img-responsive img-fullwidth" width="300" height="300" alt="product"></a>
+                          <a href="#"><img src="images/shop/product2.jpg" class="product-hover-image img-responsive img-fullwidth" alt="product"></a>
                         </div>
 
                       </div>
                       <div class="product-details">
                         <span class="product-categories"><a href="#" rel="tag">Music</a></span>
-                        <h5 class="product-title"><a href="shop-product-details.html">Product Title</a></h5>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="isotope-item cat1 cat3">
-                  <div class="isotope-item-inner">
-                    <div class="product">
-                      <div class="product-header">
-
-                        <div class="thumb image-swap">
-                          <a href="shop-product-details.html"><img src="images/shop/product.jpg" class="product-main-image img-responsive img-fullwidth" width="300" height="300" alt="product"></a>
-                          <a href="shop-product-details.html"><img src="images/shop/product2.jpg" class="product-hover-image img-responsive img-fullwidth" alt="product"></a>
-                        </div>
-
-                      </div>
-                      <div class="product-details">
-                        <span class="product-categories"><a href="#" rel="tag">Music</a></span>
-                        <h5 class="product-title"><a href="shop-product-details.html">Product Title</a></h5>
+                        <h5 class="product-title"><a href="#">Product Title</a></h5>
 
                       </div>
                     </div>
@@ -690,7 +691,7 @@
           <div class="tm-sc-section-title section-title">
             <div class="title-wrapper">
               <h6 class="title-icon-left text-theme-colored1 m-0">From the Blog</h6>
-              <h2 class="mt-0 mb-0">Latest news & articles directly coming from blog</h2>
+              <h2 class="mt-0 mb-0">Latest News</h2>
             </div>
           </div>
         </div>
@@ -704,24 +705,29 @@
   <div class="container pt-0">
     <div class="section-content">
       <div class="row">
+        @foreach($blog as $b)
         <div class="col-md-6 col-lg-6 col-xl-4">
           <div class="blog-style1-current-theme mb-30">
             <article class="post">
               <div class="entry-header">
                 <div class="post-thumb">
-                  <div class="thumb"> <img class="w-100" src="{{asset('assets/images/blog/1.jpg')}}" alt="Image"></div>
+                  <div class="thumb"> 
+                    <img class="w-100" src="{{asset('Backend/images/blogs/'.$b->image)}}" alt="Image">
+                  </div>
                 </div>
               </div>
               <div class="entry-content">
                 <div class="entry-meta">
-                  <h4 class="entry-title mt-0 mb-20"><a href="news-details.html" rel="bookmark">Oral Contraceptive Pills Protect Against</a></h4>
+                  <h4 class="entry-title mt-0 mb-20">
+                    <a href="#" rel="bookmark">{{$b->title}}</a></h4>
                   <div class="post-excerpt mb-20">
-                    <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
+                    <p>{!! Str::limit($b->short_desc,50) !!}</p>
                   </div>
-                  <div class="post-meta">
-                    <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
-                    <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
-                    <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
+                  <div class="post-meta">                   
+                    <span class="comments-type mr-10">
+                      <i class="far fa-comments text-theme-colored1"></i>
+                       {{$b->views}} Views
+                    </span>                    
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -729,6 +735,7 @@
             </article>
           </div>
         </div>
+        @endforeach
         <div class="col-md-6 col-lg-6 col-xl-4">
           <div class="blog-style1-current-theme mb-30">
             <article class="post">

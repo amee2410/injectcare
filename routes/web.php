@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ContactusController;
@@ -29,6 +30,9 @@ Route::get('/', function () {
     return redirect()->route('index.index');
 });
 Route::get('/contact-us',[Maincontroller::class, 'contact'])->name('contact-us');
+Route::resource('/products', productController::class);
+Route::resource('/blogs',blogController::class);
+Route::get('/about-us',[Maincontroller::class, 'about'])->name('about-us');
 
 Auth::routes();
 //admin side
@@ -45,3 +49,4 @@ Route::resource('/Category', Product_categoryController::class);
 Route::resource('/Clients', ClientsController::class);
 Route::resource('/Certificate', CertificateController::class);
 Route::resource('/Products', ProductsController::class);
+Route::resource('/Blogs', BlogsController::class);

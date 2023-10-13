@@ -20,7 +20,9 @@ class Maincontroller extends Controller
         $department = DB::table('departments')->select('*')->get();
         $clients = DB::table('clients')->select('*')->get();
         $certificate = DB::table('certificates')->select('*')->get();
-        return view('Frontend.index', compact('banner', 'feature', 'about', 'counter', 'team', 'department', 'clients', 'certificate'));
+        $data1 = DB::table('products')->select('*')->get();
+        $blog = DB::table('blogs')->select('*')->limit(3)->get();
+        return view('Frontend.index', compact('banner', 'feature', 'about', 'counter', 'team', 'department', 'clients', 'certificate', 'data1', 'blog'));
     }
 
     /**
@@ -73,5 +75,11 @@ class Maincontroller extends Controller
     public function contact()
     {
        return view('Frontend.contact-us');
+    }
+    public function about()
+    {  
+        $about = DB::table('abouts')->select('*')->first();
+        $team = DB::table('teams')->select('*')->get();
+        return view('Frontend.about-us', compact('about', 'team'));
     }
 }

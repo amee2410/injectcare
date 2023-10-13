@@ -80,21 +80,22 @@
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Short Description</label>
+                                                   <div class="col-sm-10">
+                                                    <textarea class="textarea" rows="3" cols="50" type="text" name="short_desc" class="form-control" placeholder="Enter Description">{{$data->short_desc}}</textarea>
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Description</label>
                                                    <div class="col-sm-10">
                                                     <textarea class="textarea" rows="3" cols="50" type="text" name="description" class="form-control" placeholder="Enter Description">{{$data->description}}</textarea>
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
+         
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Posted By</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="posted_by" id="p_name" placeholder="Posted by" value="{{$data->posted_by}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (370 X 283px)</h6></label>
+                                                   <label class="col-sm-2 col-form-label">Image <h6 style="font-size: 14px; color: red;">Size: (415 X 235px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="image" id="p_img">
                                                       <span class="messages"></span>
@@ -107,31 +108,16 @@
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Alt Tag</label>
+                                                   <label class="col-sm-2 col-form-label">Detail Page Image <h6 style="font-size: 14px; color: red;">Size: (1000 X 650px)</h6></label>
                                                    <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="alt_tag" id="name" placeholder="Title" value="{{$data->alt_tag}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Detail Page Image <h6 style="font-size: 14px; color: red;">Size: (770 X 427px)</h6></label>
-                                                   <div class="col-sm-10">
-                                                      <input type="file" class="form-control" name="detail_image" id="p_img">
+                                                      <input type="file" class="form-control" name="large_img" id="p_img">
                                                       <span class="messages"></span>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label"></label>
                                                    <div class="col-sm-10">
-                                                       <img class="img-fluid card-img-top" style="height: 400px; width: 600px;" src="{{ asset('Backend/images/blogs/detail/'.$data->detail_image) }}" alt="Card image cap"><br><br>
-                                                   </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Detail Image Alt Tag</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="d_alt_tag" id="name" placeholder="Title" value="{{$data->d_alt_tag}}">
-                                                      <span class="messages"></span>
+                                                       <img class="img-fluid card-img-top" style="height: 400px; width: 600px;" src="{{ asset('Backend/images/blogdetail/'.$data->large_img) }}" alt="Card image cap"><br><br>
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -144,18 +130,9 @@
                                                 <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label"></label>
                                                    <div class="col-sm-10">
-                                                       <img class="img-fluid card-img-top" style="height: 300px; width: 1200px;" src="{{ asset('Backend/images/blogs/banner/'.$data->banner_image) }}" alt="Card image cap"></center><br><br>
+                                                       <img class="img-fluid card-img-top" style="height: 300px; width: 1200px;" src="{{ asset('Backend/images/pagebnr/'.$data->banner_image) }}" alt="Card image cap"></center><br><br>
                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Banner Image Alt Tag</label>
-                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" name="b_alt_tag" id="name" placeholder="Title" value="{{$data->b_alt_tag}}">
-                                                      <span class="messages"></span>
-                                                   </div>
-                                                </div>
-
-                                                
+                                                </div>                                              
                                                 
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Meta Title</label>
