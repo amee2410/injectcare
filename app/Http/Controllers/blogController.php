@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\blog;
 
 class blogController extends Controller
 {
@@ -36,9 +35,10 @@ class blogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($slug)
     {
-        //
+        $data = DB::table('blogs')->select('*')->where('slug',$slug)->first();
+        return view('Frontend.blog-detail',compact('data'));
     }
 
     /**

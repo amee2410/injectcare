@@ -80,6 +80,11 @@ class Maincontroller extends Controller
     {  
         $about = DB::table('abouts')->select('*')->first();
         $team = DB::table('teams')->select('*')->get();
-        return view('Frontend.about-us', compact('about', 'team'));
+        $mision = DB::table('missionvisions')->select('*')->first();
+        return view('Frontend.about-us', compact('about', 'team','mision'));
+    }
+    public function career()
+    {
+       return view('Frontend.career');
     }
 }

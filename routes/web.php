@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\blogController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ContactusController;
@@ -11,8 +12,10 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\FeatureController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Maincontroller;
+use App\Http\Controllers\MissionvisionController;
 use App\Http\Controllers\Product_categoryController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\productController;
 use App\Http\Controllers\TeamController;
 
 /*
@@ -30,9 +33,10 @@ Route::get('/', function () {
     return redirect()->route('index.index');
 });
 Route::get('/contact-us',[Maincontroller::class, 'contact'])->name('contact-us');
-Route::resource('/products', productController::class);
+Route::resource('/product', productController::class);
 Route::resource('/blogs',blogController::class);
 Route::get('/about-us',[Maincontroller::class, 'about'])->name('about-us');
+Route::get('/career',[Maincontroller::class, 'career'])->name('career');
 
 Auth::routes();
 //admin side
@@ -50,3 +54,4 @@ Route::resource('/Clients', ClientsController::class);
 Route::resource('/Certificate', CertificateController::class);
 Route::resource('/Products', ProductsController::class);
 Route::resource('/Blogs', BlogsController::class);
+Route::resource('/Mission_Vision', MissionvisionController::class);

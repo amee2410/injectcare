@@ -75,11 +75,11 @@
           <div class="col-md-6 col-xl-4">
             <div class="service-box mb-30">
               <div class="service-icon">
-                <img class="icon-img" src="images/icon/1.png" alt="Icon">
+                <img class="icon-img" src="{{asset('Backend/images/mission/'.$mision->mission_image)}}" alt="Icon">
               </div>
               <div class="service-details">
-                <h4 class="title"><a href="#">Mission</a></h4>
-                <p>Sed quia magni dolores eos qui ratione voluptatem sequi nesciunt eque porro voluptatem sequi nesciunt</p>
+                <h4 class="title"><a href="#">{{$mision->mission_title}}</a></h4>
+                <p>{{$mision->mission_description}}</p>
                 
               </div>
             </div>
@@ -87,11 +87,11 @@
           <div class="col-md-6 col-xl-4">
             <div class="service-box mb-30">
               <div class="service-icon">
-                <img class="icon-img" src="images/icon/2.png" alt="Icon">
+                <img class="icon-img" src="{{asset('Backend/images/vision/'.$mision->vision_image)}}" alt="Icon">
               </div>
               <div class="service-details">
-                <h4 class="title"><a href="#">Vision</a></h4>
-                <p>Sed quia magni dolores eos qui ratione voluptatem sequi nesciunt eque porro voluptatem sequi nesciunt</p>
+                <h4 class="title"><a href="#">{{$mision->vision_title}}</a></h4>
+                <p>{{$mision->vision_description}}</p>
                 
               </div>
             </div>
@@ -99,11 +99,11 @@
           <div class="col-md-6 col-xl-4">
             <div class="service-box mb-30">
               <div class="service-icon">
-                <img class="icon-img" src="images/icon/3.png" alt="Icon">
+                <img class="icon-img" src="{{asset('Backend/images/core/'.$mision->core_image)}}" alt="Icon">
               </div>
               <div class="service-details">
-                <h4 class="title"><a href="#">Core Values</a></h4>
-                <p>Sed quia magni dolores eos qui ratione voluptatem sequi nesciunt eque porro voluptatem sequi nesciunt</p>
+                <h4 class="title"><a href="#">{{$mision->core_title}}</a></h4>
+                <p>{{$mision->core_description}}</p>
                 
               </div>
             </div>

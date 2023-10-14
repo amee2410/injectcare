@@ -99,5 +99,5 @@ class AboutusController extends Controller
     public function destroy(string $id)
     {
         //
-    }
+    }    
 }

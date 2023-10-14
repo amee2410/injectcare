@@ -163,7 +163,7 @@
                         $(document).ready(function(){
                             $("#name").on("input", function(){
                                 // Print entered value in a div box
-                                    $("#slug").val($(this).val().split(' ').join('_').toLowerCase());
+                                    $("#slug").val($(this).val().split(' ').join('-').toLowerCase());
                 
                             });
                         });
