@@ -1,9 +1,15 @@
+<?php
+$currentURL = url()->current();
+$slug = basename(parse_url($currentURL, PHP_URL_PATH));
+$BreadCrumb = DB::table('menus')->select('*')->where('slug', $slug)->first();
+?>
+
 @extends('Frontend.layouts.app')
 
 @section('content')
 <!-- Start main-content -->
 <div class="main-content-area">
-
+  <?php $data = DB::table('menus')->select('*')->where('id', 6)->first(); ?>
   <!-- Section: home Start -->
   <section class="page-title divider layer-overlay overlay-theme-colored2-9 section-typo-light bg-img-center" data-tm-bg-img="images/bg/bg1.jpg">
     <div class="container pt-50 pb-50">
@@ -11,14 +17,14 @@
       <div class="section-content">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h2 class="title text-white">Contact</h2>
+            <h2 class="title text-white">Contact Us</h2>
             <nav role="navigation" class="breadcrumb-trail breadcrumbs">
               <div class="breadcrumbs">
                 <span class="trail-item trail-begin">
                   <a href="#"><span>Home</span></a>
                 </span>
                 <span><i class="fa fa-angle-right"></i></span>
-                <span class="trail-item trail-end">Contact</span>
+                <span class="trail-item trail-end">Contact Us</span>
               </div>
             </nav>
           </div>
@@ -78,27 +84,26 @@
             <ul class="styled-icons icon-dark icon-sm icon-circled mt-30">
               <li><a href="#" data-tm-bg-color="#3B5998"><i class="fab fa-facebook"></i></a></li>
               <li><a href="#" data-tm-bg-color="#02B0E8"><i class="fab fa-twitter"></i></a></li>
-
               <li><a href="#" data-tm-bg-color="#D9CCB9"><i class="fab fa-instagram"></i></a></li>
-
             </ul>
           </div>
+          <br>
           <div class="col-lg-6">
             <h2 class="mt-0 mb-0">Interested in discussing?</h2>
-            <p class="font-size-20">Active & Ready to use Contact Form!</p>
             <!-- Contact Form -->
-            <form id="contact_form" name="contact_form" class="" action="" method="post">
+            <form id="contact_form" name="contact_form" class="" action="{{route('inquiry')}}" method="post">
+            @csrf
               <div class="row">
                 <div class="col-sm-6">
                   <div class="mb-3">
                     <label>Name <small>*</small></label>
-                    <input name="form_name" class="form-control" type="text" placeholder="Enter Name">
+                    <input name="name" class="form-control" type="text" placeholder="Enter Name">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="mb-3">
                     <label>Email <small>*</small></label>
-                    <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                    <input name="email" class="form-control required email" type="email" placeholder="Enter Email">
                   </div>
                 </div>
               </div>
@@ -106,28 +111,27 @@
                 <div class="col-sm-6">
                   <div class="mb-3">
                     <label>Subject <small>*</small></label>
-                    <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
+                    <input name="subject" class="form-control required" type="text" placeholder="Enter Subject">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="mb-3">
                     <label>Phone</label>
-                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                    <input name="phone" class="form-control" type="text" placeholder="Enter Phone">
                   </div>
                 </div>
               </div>
               <div class="mb-3">
                 <label>Message</label>
-                <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+                <textarea name="message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
               </div>
               <div class="mb-3">
                 <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                <button type="submit" class="btn btn-flat btn-theme-colored1 text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" data-loading-text="Please wait...">Send your message</button>
-                <button type="reset" class="btn btn-flat btn-theme-colored3 text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px">Reset</button>
+                <button type="submit" name="submit" value="submit" class="btn btn-flat btn-theme-colored1 text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px">Send</button>
               </div>
             </form>
             <!-- Contact Form Validation-->
-            <script>
+            <!-- <script>
               (function($) {
                 $("#contact_form").validate({
                   submitHandler: function(form) {
@@ -153,10 +157,10 @@
                   }
                 });
               })(jQuery);
-            </script>
+            </script> -->
           </div>
-            </br>
-            </br>
+          </br>
+          </br>
           <style>
             #map {
               width: 100%;
@@ -167,7 +171,7 @@
           <div class="col-lg-6">
             <!-- Map Container Placeholder -->
             <div id="map" style="height: 400px; width: 1300px;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.5252052418136!2d72.9220900750326!3d20.361224010371455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ce4766dc513d%3A0x31709c37cf7f7d66!2sInject%20Care%20Parenterals%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1696842901396!5m2!1sen!2sin" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.5252052418136!2d72.9220900750326!3d20.361224010371455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ce4766dc513d%3A0x31709c37cf7f7d66!2sInject%20Care%20Parenterals%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1696842901396!5m2!1sen!2sin" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>

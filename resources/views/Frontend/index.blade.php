@@ -212,10 +212,9 @@
                         </div>
                       </div>
                       <div class="product-details">
-                        <span class="product-categories"><a href="{{url('products')}}" rel="tag">{{$p->category_name}}</a></span>
-                        <h5 class="product-title"><a href="">{{$p->product_name}}</a></h5>
+                        <span class="product-categories"><a href="{{url('product')}}" rel="tag">{{$p->category_name}}</a></span>
+                        <h5 class="product-title"><a href="{{route('product.show',$p->slug)}}">{{$p->product_name}}</a></h5>
                       </div>
-                      <!-- {{route('products.show',$p->slug)}} -->
                     </div>
                   </div>
                 </div>

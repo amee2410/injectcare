@@ -78,12 +78,6 @@
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Short Description:</label>
-                                                    <div class="col-sm-10">
-                                                      <textarea rows="5" cols="5" class="form-control" name="short_description" placeholder="Enter Short Description"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
                                                    <label class="col-sm-2 col-form-label">Banner Image <h6 style="font-size: 14px; color: red;">Size: (1894 X 434px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="banner_image" id="p_img">

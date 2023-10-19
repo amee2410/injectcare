@@ -106,6 +106,20 @@ $breadcrumbs = ["/home"=>"Home", "/Products"=>"Products", "#"=>"Create"]
                                         </div>
                                     </div>
                                     <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Long Description</label>
+                                        <div class="col-sm-10">
+                                            <textarea class="textarea" rows="3" cols="50" type="text" name="long_desc" class="form-control" placeholder="Enter Description"></textarea>
+                                            <span class="messages"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                                   <label class="col-sm-2 col-form-label">Multiple Image</label>
+                                                   <div class="col-sm-10">
+                                                      <input type="file" class="form-control" name="mul_img[]" id="p_img" multiple="multiple">
+                                                      <span class="messages"></span>
+                                                   </div>
+                                                </div>
+                                    <div class="form-group row">
                                         <label class="col-sm-2 col-form-label">Banner Image</label>
                                         <div class="col-sm-10">
                                             <input type="file" class="form-control" name="banner_image" id="p_img" required>

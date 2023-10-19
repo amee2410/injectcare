@@ -10,8 +10,11 @@ use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\Header_settingController;
+use App\Http\Controllers\Footer_settingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Maincontroller;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\MissionvisionController;
 use App\Http\Controllers\Product_categoryController;
 use App\Http\Controllers\ProductsController;
@@ -37,6 +40,7 @@ Route::resource('/product', productController::class);
 Route::resource('/blogs',blogController::class);
 Route::get('/about-us',[Maincontroller::class, 'about'])->name('about-us');
 Route::get('/career',[Maincontroller::class, 'career'])->name('career');
+Route::Post('/contact-us', [MainController::class, 'inquiry'])->name('inquiry');
 
 Auth::routes();
 //admin side
@@ -55,3 +59,6 @@ Route::resource('/Certificate', CertificateController::class);
 Route::resource('/Products', ProductsController::class);
 Route::resource('/Blogs', BlogsController::class);
 Route::resource('/Mission_Vision', MissionvisionController::class);
+Route::resource('/Header_Setting', Header_settingController::class);
+Route::resource('/Footer_Setting', Footer_settingController::class);
+Route::resource('/Menu', MenuController::class);

@@ -12,7 +12,10 @@ class productController extends Controller
      */
     public function index()
     {
-                return view('Frontend.product');
+        $data1 = DB::table('product_categories')->select('*')->get();
+        $products = DB::table('products')->select('*')->get();
+        
+        return view('Frontend.product',compact('data1','products'));
     }
 
     /**
@@ -35,9 +38,12 @@ class productController extends Controller
      * Display the specified resource.
      */
     public function show($slug)
-    {
-        $data = DB::table('products')->select('*')->where('slug',$slug)->first();
-        return view('Frontend.product-details',compact('data'));
+    { 
+        
+        $data = DB::table('products')->select('*')->where('slug', $slug)->first();
+        $product = DB::table('products')->select('*')->get();
+    
+        return view('Frontend.product-detail', compact('data','product'));
     }
 
     /**

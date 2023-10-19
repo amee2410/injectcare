@@ -65,7 +65,7 @@
                                                 @method('PUT') 
                                                 @csrf
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Favicon <h6 style="font-size: 14px; color: red;">Size: (32 X 32px)</h6></label>
+                                                   <label class="col-sm-2 col-form-label">Favicon <h6 style="font-size: 14px; color: red;">Size: (36 X 36px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="favicon" id="p_img">
                                                       <span class="messages"></span>
@@ -78,7 +78,7 @@
                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                   <label class="col-sm-2 col-form-label">Logo <h6 style="font-size: 14px; color: red;">Size: (181 X 54px)</h6></label>
+                                                   <label class="col-sm-2 col-form-label">Logo <h6 style="font-size: 14px; color: red;">Size: (162 X 45px)</h6></label>
                                                    <div class="col-sm-10">
                                                       <input type="file" class="form-control" name="logo" id="p_img">
                                                       <span class="messages"></span>

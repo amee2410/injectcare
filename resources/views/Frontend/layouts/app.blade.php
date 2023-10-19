@@ -12,13 +12,13 @@
 
     <!-- Page Title -->
     <title>Inject Care</title>
-
+    <?php $data = DB::table('header_settings')->select('*')->first(); ?>
     <!-- Favicon and Touch icon -->
-    <link href="{{asset('assets/images/favicon.png')}}" rel="shortcut icon" type="image/png">
-    <link href="{{asset('assets/images/apple-touch-icon.png')}}" rel="apple-touch-icon">
-    <link href="{{asset('assets/images/apple-touch-icon-72x72.png')}}" rel="apple-touch-icon" sizes="72x72">
-    <link href="{{asset('assets/images/apple-touch-icon-114x114.png')}}" rel="apple-touch-icon" sizes="114x114">
-    <link href="{{asset('assets/images/apple-touch-icon-144x144.png')}}" rel="apple-touch-icon" sizes="144x144">
+    <link href="{{asset('Backend/images/header_setting/'.$data->favicon)}}" rel="shortcut icon" type="image/png">
+    <link href="{{asset('Backend/images/header_setting/'.$data->favicon)}}" rel="apple-touch-icon">
+    <link href="{{asset('Backend/images/header_setting/'.$data->favicon)}}" rel="apple-touch-icon" sizes="72x72">
+    <link href="{{asset('Backend/images/header_setting/'.$data->favicon)}}" rel="apple-touch-icon" sizes="114x114">
+    <link href="{{asset('Backend/images/header_setting/'.$data->favicon)}}" rel="apple-touch-icon" sizes="144x144">
     @include('Frontend.layouts.head')
 </head>
 
@@ -30,13 +30,13 @@
                 <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
             </div>
         </div>
-        <div id="disable-preloader" class="btn btn-default btn-sm bg-white-f5">Disable Preloader</div>
     </div>
     <div class="side-panel-body-overlay"></div>
     <div id="side-panel-container" class="dark" data-tm-bg-img="{{asset('assets/images/side-push-bg.jpg')}}">
         <div class="side-panel-wrap">
             <div id="side-panel-trigger-close" class="side-panel-trigger">
-                <a href="#"><i class="fa fa-times side-panel-trigger-icon"></i></a></div>
+                <a href="#"><i class="fa fa-times side-panel-trigger-icon"></i></a>
+            </div>
             <img class="logo mb-50" src="{{asset('assets/images/logo-wide.png')}}" alt="Logo">
             <p>Our motive is to help the poor, helpless and orphan children all over the world.</p>
             <div class="widget">

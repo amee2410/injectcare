@@ -1,13 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\products;
 use File;
-
-
 class ProductsController extends Controller
 {
     /**
@@ -18,7 +14,6 @@ class ProductsController extends Controller
         $data = DB::table('products')->select('*')->get();
         return view('Backend.Products.list', compact('data'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -27,7 +22,6 @@ class ProductsController extends Controller
         $category = DB::table('product_categories')->select('*')->get();
         return view('Backend.Products.create', compact('category'));
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -37,13 +31,22 @@ class ProductsController extends Controller
             'product_name' => 'required',
             'slug' => 'required',
             'description' => 'required',
+            'long_desc' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'banner_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'category_name' => 'required',
         ]);
-
         $data = new products();
-
+        $destinationPath = public_path('Backend/images/multiple/');
+        $multi_blog_images = [];
+        if ($files = $request->file('mul_img')) {
+            foreach ($files as $file_b) {
+                $name = "Multiple-" . strtotime(date('d-m-Y h:i:s')) . $file_b->getClientOriginalName();
+                $multi_blog_images[] = $name;
+                $file_b->move($destinationPath, $name);
+            }
+            $data['mul_img'] = implode("|", $multi_blog_images);
+        }
         $categoryName = DB::table('product_categories')->where('id', $request->category_id)->value('category_name');
 
         $imageFilename = $categoryName . '-' . $request->product_name . '.' . $request->file('image')->getClientOriginalExtension();
@@ -62,15 +65,14 @@ class ProductsController extends Controller
         $data->product_name = $request->product_name;
         $data->slug = $request->slug;
         $data->description = $request->description;
+        $data->long_desc = $request->long_desc;
         $data->meta_title = $request->meta_title;
         $data->meta_keywords = $request->meta_keywords;
         $data->meta_description = $request->meta_description;
 
         $data->save();
-
         return redirect('Products')->with('success', 'Record Inserted Successfully');
     }
-
     /**
      * Display the specified resource.
      */
@@ -98,6 +100,7 @@ class ProductsController extends Controller
             'product_name' => 'required',
             'slug' => 'required',
             'description' => 'required',
+            'long_desc' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'banner_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -135,18 +138,27 @@ class ProductsController extends Controller
             $data->banner_image = $filename1;
             $files->move($destinationPath, $filename1);
         }
+        $destinationPath = public_path('Backend/images/multiple/');
+        $multi_blog_images = [];
+        if ($files = $request->file('mul_img')) {
+            foreach ($files as $file_b) {
+                $name = "Multiple-" . strtotime(date('d-m-Y h:i:s')) . $file_b->getClientOriginalName();
+                $multi_blog_images[] = $name;
+                $file_b->move($destinationPath, $name);
+            }
+            $data->mul_img = implode("|", $multi_blog_images);
+        }
         $data->category_name = $categoryName;
         $data->product_name = $request->product_name;
         $data->slug = $request->slug;
         $data->description = $request->description;
+        $data->long_desc = $request->long_desc;
         $data->meta_title = $request->meta_title;
         $data->meta_keywords = $request->meta_keywords;
         $data->meta_description = $request->meta_description;
         $data->save();
-
         return redirect('Products')->with('success', 'Record Inserted Successfully');
     }
-
     /**
      * Remove the specified resource from storage.
      */

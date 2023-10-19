@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('product_name');
             $table->string('slug');
             $table->string('description');
+            $table->string('long_desc');
             $table->string('image');  
             $table->string('banner_image');
             $table->string('meta_title');
