@@ -14,5 +14,5 @@ class career_inquiry extends Model
         'phone',
         'message',
         'pdf',
-    ]
+    ];
 }

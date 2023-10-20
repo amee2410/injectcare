@@ -61,56 +61,7 @@
             </div>
           </div>
           @endforeach
-          <div class="col-md-6 col-lg-6 col-xl-4">
-            <div class="blog-style1-current-theme mb-30">
-              <article class="post">
-                <div class="entry-header">
-                  <div class="post-thumb">
-                    <div class="thumb"> <img class="w-100" src="images/blog/2.jpg" alt="Image"></div>
-                  </div>
-                </div>
-                <div class="entry-content">
-                  <div class="entry-meta">
-                    <h4 class="entry-title mt-0 mb-20"><a href="#" rel="bookmark">Reducing the Side-Effects of Prostate Hormone</a></h4>
-                    <div class="post-excerpt mb-20">
-                      <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
-                      <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
-                      <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-6 col-xl-4">
-            <div class="blog-style1-current-theme mb-30">
-              <article class="post">
-                <div class="entry-header">
-                  <div class="post-thumb">
-                    <div class="thumb"> <img class="w-100" src="images/blog/3.jpg" alt="Image"></div>
-                  </div>
-                </div>
-                <div class="entry-content">
-                  <div class="entry-meta">
-                    <h4 class="entry-title mt-0 mb-20"><a href="#" rel="bookmark">Schoolchildren Unlikely to Transmit</a></h4>
-                    <div class="post-excerpt mb-20">
-                      <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
-                      <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
-                      <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </article>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>

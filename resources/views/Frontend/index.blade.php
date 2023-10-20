@@ -606,72 +606,42 @@
             <div class="book-now-form">
               <h6 class="mt-0 font-italic sub-title-icon white-icon text-white">Contact With Us</h6>
               <h2 class="text-white mb-40">Write a Message</h2>
-              <form id="contact_form" name="contact_form" class="" action="" method="post">
+              <form id="contact_form" name="contact_form" class="" action="{{route('inquiry')}}" method="post">
+                  @csrf
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="mb-3">
-                      <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                      <input name="name" class="form-control" type="text" placeholder="Enter Name" required="">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="mb-3">
-                      <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                      <input name="email" class="form-control required email" type="email" placeholder="Enter Email">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="mb-3">
-                      <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
+                      <input name="subject" class="form-control required" type="text" placeholder="Enter Subject">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="mb-3">
-                      <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                      <input name="phone" class="form-control" type="text" placeholder="Enter Phone">
                     </div>
                   </div>
-                  <div class="col-sm-12">
-                    <div class="mb-3">
-                      <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
-                    </div>
-                  </div>
+                  
                 </div>
                 <div class="mb-3">
-                  <textarea name="form_message" class="form-control required" rows="6" placeholder="Enter Message"></textarea>
+                  <textarea name="message" class="form-control required" rows="6" placeholder="Enter Message"></textarea>
                 </div>
                 <div class="mb-3 mb-0">
                   <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                  <button type="submit" class="btn btn-flat btn-theme-colored2 text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" data-loading-text="Please wait...">Send a message</button>
+                  <button type="submit" name="submit" value="submir" class="btn btn-flat btn-theme-colored2 text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px">Send</button>
                 </div>
               </form>
-              <!-- Contact Form Validation-->
-              <script>
-                (function($) {
-                  $("#contact_form").validate({
-                    submitHandler: function(form) {
-                      var form_btn = $(form).find('button[type="submit"]');
-                      var form_result_div = '#form-result';
-                      $(form_result_div).remove();
-                      form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                      var form_btn_old_msg = form_btn.html();
-                      form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                      $(form).ajaxSubmit({
-                        dataType: 'json',
-                        success: function(data) {
-                          if (data.status == 'true') {
-                            $(form).find('.form-control').val('');
-                          }
-                          form_btn.prop('disabled', false).html(form_btn_old_msg);
-                          $(form_result_div).html(data.message).fadeIn('slow');
-                          setTimeout(function() {
-                            $(form_result_div).fadeOut('slow')
-                          }, 6000);
-                        }
-                      });
-                    }
-                  });
-                })(jQuery);
-              </script>
+            
             </div>
           </div>
         </div>
@@ -690,7 +660,7 @@
           <div class="tm-sc-section-title section-title">
             <div class="title-wrapper">
               <h6 class="title-icon-left text-theme-colored1 m-0">From the Blog</h6>
-              <h2 class="mt-0 mb-0">Latest News</h2>
+              <h2 class="mt-0 mb-0">Latest Blogs</h2>
             </div>
           </div>
         </div>
@@ -735,56 +705,6 @@
           </div>
         </div>
         @endforeach
-        <div class="col-md-6 col-lg-6 col-xl-4">
-          <div class="blog-style1-current-theme mb-30">
-            <article class="post">
-              <div class="entry-header">
-                <div class="post-thumb">
-                  <div class="thumb"> <img class="w-100" src="images/blog/2.jpg" alt="Image"></div>
-                </div>
-              </div>
-              <div class="entry-content">
-                <div class="entry-meta">
-                  <h4 class="entry-title mt-0 mb-20"><a href="news-details.html" rel="bookmark">Reducing the Side-Effects of Prostate Hormone</a></h4>
-                  <div class="post-excerpt mb-20">
-                    <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
-                  </div>
-                  <div class="post-meta">
-                    <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
-                    <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
-                    <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xl-4">
-          <div class="blog-style1-current-theme mb-30">
-            <article class="post">
-              <div class="entry-header">
-                <div class="post-thumb">
-                  <div class="thumb"> <img class="w-100" src="images/blog/3.jpg" alt="Image"></div>
-                </div>
-              </div>
-              <div class="entry-content">
-                <div class="entry-meta">
-                  <h4 class="entry-title mt-0 mb-20"><a href="news-details.html" rel="bookmark">Schoolchildren Unlikely to Transmit SARS</a></h4>
-                  <div class="post-excerpt mb-20">
-                    <p>Lorem ipsum is simply free text used by new pesnhl note used by new cing elit sed do tempor ut labor.</p>
-                  </div>
-                  <div class="post-meta">
-                    <span class="admin-type mr-10"><i class="far fa-user-circle text-theme-colored1"></i> Admin</span>
-                    <span class="comments-type mr-10"><i class="far fa-comments text-theme-colored1"></i> 2 Comments</span>
-                    <span class="comments-type"><i class="far fa-share-square text-theme-colored1"></i> 5 share</span>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </article>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -800,7 +720,7 @@
         </div>
         <div class="col-lg-4">
           <div class="tm-sc-button mt-20 text-start text-lg-end">
-            <a href="#" class="btn btn-light">Contact Us</a>
+            <a href="{{url('contact-us')}}" class="btn btn-light">Contact Us</a>
           </div>
         </div>
       </div>

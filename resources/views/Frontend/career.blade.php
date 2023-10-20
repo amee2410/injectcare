@@ -37,9 +37,10 @@ $BreadCrumb = DB::table('menus')->select('*')->where('slug', $slug)->first();
     <div class="container">
       <div class="section-content">
         <div class="row">
+         <?php $data = DB::table('contacts')->select('*')->first(); ?>
           <div class="col-lg-6">
             <h5 class="mb-0 text-gray">Happy to help!</h5>
-            <h2 class="mb-30">If you need someone to talk to, we listen. We won’t judge or tell you what to do.</h2>
+            <h2 class="mb-30">If you need someone to talk to, we listen.</h2>
             <div class="icon-box icon-left iconbox-centered-in-responsive iconbox-theme-colored1 animate-icon-on-hover animate-icon-rotate mb-50">
               <div class="icon-box-wrapper">
                 <div class="icon-wrapper">
@@ -47,7 +48,9 @@ $BreadCrumb = DB::table('menus')->select('*')->where('slug', $slug)->first();
                 </div>
                 <div class="icon-text">
                   <h5 class="icon-box-title mt-0">Phone</h5>
-                  <div class="content"><a href="tel:+123.456.7890">+123.456.7890</a></div>
+                  <div class="content">
+                    <a href="tel:{{$data->phone1}}">{{$data->phone1}} | {{$data->phone2}} | {{$data->phone3}}</a>
+                  </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
@@ -59,7 +62,7 @@ $BreadCrumb = DB::table('menus')->select('*')->where('slug', $slug)->first();
                 </div>
                 <div class="icon-text">
                   <h5 class="icon-box-title mt-0">Email</h5>
-                  <div class="content"><a href="mailto:needhelp@yourdomain.com">needhelp@yourdomain.com</a></div>
+                  <div class="content"><a href="mailto:{{$data->email}}">{{$data->email}}</a></div>
                 </div>
                 <div class="clearfix"></div>
               </div>
@@ -71,7 +74,7 @@ $BreadCrumb = DB::table('menus')->select('*')->where('slug', $slug)->first();
                 </div>
                 <div class="icon-text">
                   <h5 class="icon-box-title mt-0">Address</h5>
-                  <div class="content">66 Broklyn Street USA</div>
+                  <div class="content">{{$data->address}}</div>
                 </div>
                 <div class="clearfix"></div>
               </div>
@@ -79,15 +82,15 @@ $BreadCrumb = DB::table('menus')->select('*')->where('slug', $slug)->first();
             <ul class="styled-icons icon-dark icon-sm icon-circled mt-30">
               <li><a href="#" data-tm-bg-color="#3B5998"><i class="fab fa-facebook"></i></a></li>
               <li><a href="#" data-tm-bg-color="#02B0E8"><i class="fab fa-twitter"></i></a></li>
-
               <li><a href="#" data-tm-bg-color="#D9CCB9"><i class="fab fa-instagram"></i></a></li>
             </ul>
           </div>
+          <br>
           <div class="col-lg-6">
             <h2 class="mt-0 mb-0">Interested in discussing?</h2>
             <p class="font-size-20">Share your CV</p>
             <!-- Contact Form -->
-            <form id="contact_form" name="contact_form" class="" action="" method="post">
+            <form class="" action="{{ route('career.store') }}" method="post" enctype='multipart/form-data'>
               @csrf
               <div class="row">
                 <div class="col-sm-6">
@@ -123,7 +126,7 @@ $BreadCrumb = DB::table('menus')->select('*')->where('slug', $slug)->first();
               </div>
               <div class="mb-3">
                 <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                <button type="submit" class="btn btn-flat btn-theme-colored1 text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px">Send</button>
+                <button type="submit" name="submit" value="submit" class="btn btn-flat btn-theme-colored1 text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px">Send</button>
                 
               </div>
             </form>

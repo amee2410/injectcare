@@ -7,6 +7,7 @@ use App\Http\Controllers\blogController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ContactusController;
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\FeatureController;
@@ -35,12 +36,14 @@ use App\Http\Controllers\TeamController;
 Route::get('/', function () {
     return redirect()->route('index.index');
 });
+Route::resource('/',mainController::class);
 Route::get('/contact-us',[Maincontroller::class, 'contact'])->name('contact-us');
 Route::resource('/product', productController::class);
 Route::resource('/blogs',blogController::class);
 Route::get('/about-us',[Maincontroller::class, 'about'])->name('about-us');
 Route::get('/career',[Maincontroller::class, 'career'])->name('career');
 Route::Post('/contact-us', [MainController::class, 'inquiry'])->name('inquiry');
+Route::resource('/career', CareerController::class);
 
 Auth::routes();
 //admin side

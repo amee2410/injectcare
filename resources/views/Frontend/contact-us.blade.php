@@ -91,7 +91,7 @@ $BreadCrumb = DB::table('menus')->select('*')->where('slug', $slug)->first();
           <div class="col-lg-6">
             <h2 class="mt-0 mb-0">Interested in discussing?</h2>
             <!-- Contact Form -->
-            <form id="contact_form" name="contact_form" class="" action="{{route('inquiry')}}" method="post">
+            <form class="" action="{{route('inquiry')}}" method="post">
             @csrf
               <div class="row">
                 <div class="col-sm-6">

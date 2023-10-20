@@ -180,7 +180,7 @@
           </div>
           <div class="col-lg-4">
             <div class="tm-sc-button mt-20 text-start text-lg-end">
-              <a href="#" class="btn btn-light">Contact Us</a>
+              <a href="{{url('contact-us')}}" class="btn btn-light">Contact Us</a>
             </div>
           </div>
         </div>
